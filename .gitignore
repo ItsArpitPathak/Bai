@@ -8,3 +8,4 @@ graphify-out/
 *.log
 .env*
 .claude/
+.archify/

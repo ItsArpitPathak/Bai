@@ -9,6 +9,9 @@ Tell Bai what's in your kitchen; it ranks daily Indian home recipes by how much 
 - **Matching:** names normalized via `synonyms.json`; staples (salt, oil, ghee, water, sugar) assumed; score = % of non-staple ingredients on hand, missing items listed.
 - All free: no paid APIs or services.
 
+## How it works
+[Sequence diagram](docs/bai-sequence.html): adding a pantry item, then fetching ranked recipes (app, API, Matcher, Postgres). It is a standalone interactive page: download the file and open it in a browser, since GitHub shows HTML as source.
+
 ## Run locally (PowerShell)
 ```powershell
 cd bai\backend; .\mvnw.cmd spring-boot:run     # API on :8080
