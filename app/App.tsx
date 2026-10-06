@@ -7,7 +7,7 @@ type Item = { id: number; name: string };
 type Result = { recipe: { name: string; veg: boolean; steps: string[] }; matchPct: number; missing: string[] };
 
 // ponytail: dev-only URL; Android emulator reaches host via 10.0.2.2. Set EXPO_PUBLIC_API_URL for deploy.
-const API = process.env.EXPO_PUBLIC_API_URL ?? (Platform.OS === 'android' ? 'http://10.0.2.2:8080' : 'http://localhost:8080');
+const API = (process.env.EXPO_PUBLIC_API_URL ?? (Platform.OS === 'android' ? 'http://10.0.2.2:8080' : 'http://localhost:8080')).trim().replace(/\/+$/, '');
 
 async function api(path: string, token: string | null, method = 'GET', body?: unknown) {
   const res = await fetch(API + path, {
