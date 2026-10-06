@@ -19,6 +19,9 @@ async function api(path: string, token: string | null, method = 'GET', body?: un
   return res.json();
 }
 
+// fetch() network failures are TypeErrors on web and React Native; free hosting sleeps when idle
+const msg = (e: any) => e instanceof TypeError ? 'Server is waking up (free hosting). Wait a minute and try again.' : e.message;
+
 const btn = { padding: 10, backgroundColor: '#2e7d32', marginVertical: 4 } as const;
 const input = { borderWidth: 1, padding: 8, marginVertical: 4 } as const;
 
@@ -47,7 +50,7 @@ function Main() {
     setResults(l.length ? await api('/match', t) : []);
   };
 
-  useEffect(() => { if (token) refresh(token).catch(e => { setErr(e.message); logout(); }); }, [token]);
+  useEffect(() => { if (token) refresh(token).catch(e => { setErr(msg(e)); if (!(e instanceof TypeError)) logout(); }); }, [token]);
 
   const logout = () => { AsyncStorage.removeItem('token').catch(() => {}); setToken(null); setItems([]); setResults([]); };
 
@@ -58,10 +61,10 @@ function Main() {
       await AsyncStorage.setItem('token', t).catch(() => {});
       setPassword('');
       setToken(t);
-    } catch (e: any) { setErr(e.message === 'Failed to fetch' ? 'Cannot reach server' : e.message); }
+    } catch (e: any) { setErr(msg(e)); }
   };
 
-  const guard = async (fn: () => Promise<void>) => { try { setErr(''); await fn(); } catch (e: any) { setErr(e.message); } };
+  const guard = async (fn: () => Promise<void>) => { try { setErr(''); await fn(); } catch (e: any) { setErr(msg(e)); } };
   const add = () => guard(async () => {
     if (!text.trim() || !token) return;
     const l = await api('/pantry', token, 'POST', { name: text });
