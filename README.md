@@ -23,10 +23,15 @@ API: `POST /auth/register|login` -> `{token}`; with `Authorization: Bearer <toke
 cd bai\backend; .\mvnw.cmd test
 ```
 
-## Deploy (free tiers)
-- **API:** Render web service, Docker runtime, root dir `bai/backend` (uses `Dockerfile`).
-- **Web:** `cd bai\app; $env:EXPO_PUBLIC_API_URL="https://<your-api>.onrender.com"; npx.cmd expo export -p web` then upload `dist` to Vercel/Netlify.
-- **Android APK:** `npx.cmd eas build -p android --profile preview` (free EAS tier).
+## Deploy (all free tiers)
+1. **Database:** create a free Neon (neon.tech) Postgres project. Note host, db, user, password.
+2. **API (Render):** New Web Service from the GitHub repo, Runtime Docker, Root Directory `backend`, Instance Free. Env vars:
+   - `SPRING_DATASOURCE_URL=jdbc:postgresql://<host>/<db>?sslmode=require`
+   - `SPRING_DATASOURCE_USERNAME=<user>`
+   - `SPRING_DATASOURCE_PASSWORD=<password>`
+   Free instances sleep when idle, so the first request after a pause takes ~30-60s.
+3. **Web (Vercel):** Import the repo, Root Directory `app`, Build Command `npx expo export -p web`, Output Directory `dist`, env var `EXPO_PUBLIC_API_URL=https://<your-service>.onrender.com`.
+4. **Android APK:** `cd app; npx.cmd eas-cli build -p android --profile preview` (free EAS tier; set `EXPO_PUBLIC_API_URL` in `eas.json` env).
 
 ## Roadmap
 Expiry alerts, quantities, shopping list, token expiry, barcode scan.
