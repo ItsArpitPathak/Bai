@@ -31,7 +31,7 @@ cd bai\backend; .\mvnw.cmd test
    - `SPRING_DATASOURCE_PASSWORD=<password>`
    Free instances sleep when idle, so the first request after a pause takes ~30-60s.
 3. **Web (Vercel):** Import the repo, Root Directory `app`, Build Command `npx expo export -p web`, Output Directory `dist`, env var `EXPO_PUBLIC_API_URL=https://<your-service>.onrender.com`.
-4. **Android APK:** `cd app; npx.cmd eas-cli build -p android --profile preview` (free EAS tier; set `EXPO_PUBLIC_API_URL` in `eas.json` env).
+4. **Android APK:** `cd app; npx.cmd eas-cli login; npx.cmd eas-cli init; npx.cmd eas-cli build -p android --profile preview` (free EAS tier). The API URL is set in `app/eas.json`. Open the download link on your phone to install the APK.
 
 ## Roadmap
 Expiry alerts, quantities, shopping list, token expiry, barcode scan.
