@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.util.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import tools.jackson.core.type.TypeReference;
@@ -16,6 +17,8 @@ public class ApiController {
     record NameReq(String name) {}
     record NamesReq(List<String> names) {}
     record TokenResp(String token) {}
+    record RecipeReq(String recipeId) {}
+    record CheckedReq(boolean checked) {}
 
     private final Matcher matcher;
     private final List<Matcher.Recipe> recipes;
@@ -23,12 +26,16 @@ public class ApiController {
     private final UserRepo users;
     private final TokenRepo tokens;
     private final PantryRepo pantry;
+    private final SavedRepo saved;
+    private final ShoppingRepo shopping;
     private final BCryptPasswordEncoder enc = new BCryptPasswordEncoder();
 
-    public ApiController(UserRepo users, TokenRepo tokens, PantryRepo pantry) throws Exception {
+    public ApiController(UserRepo users, TokenRepo tokens, PantryRepo pantry, SavedRepo saved, ShoppingRepo shopping) throws Exception {
         this.users = users;
         this.tokens = tokens;
         this.pantry = pantry;
+        this.saved = saved;
+        this.shopping = shopping;
         var m = JsonMapper.builder().build();
         try (InputStream s = getClass().getResourceAsStream("/data/synonyms.json");
              InputStream r = getClass().getResourceAsStream("/data/recipes.json");
@@ -112,6 +119,80 @@ public class ApiController {
         Long u = uid(auth);
         pantry.findById(id).filter(p -> p.userId.equals(u)).ifPresent(pantry::delete);
         return pantry.findByUserIdOrderByName(u);
+    }
+
+    private List<String> savedIds(Long u) { return saved.findByUserId(u).stream().map(x -> x.recipeId).toList(); }
+
+    /** Saved recipes as match results against the user's pantry, so the app can reuse its recipe card. */
+    @GetMapping("/saved")
+    public List<Matcher.Result> savedList(@RequestHeader(value = "Authorization", required = false) String auth) {
+        Long u = uid(auth);
+        Set<String> ids = new HashSet<>(savedIds(u));
+        var mine = recipes.stream().filter(r -> ids.contains(r.id())).toList();
+        return matcher.match(pantry.findByUserIdOrderByName(u).stream().map(p -> p.name).toList(), mine).results();
+    }
+
+    @PostMapping("/saved")
+    public List<String> save(@RequestHeader(value = "Authorization", required = false) String auth, @RequestBody RecipeReq r) {
+        Long u = uid(auth);
+        if (recipes.stream().noneMatch(x -> x.id().equals(r.recipeId()))) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        if (!saved.existsByUserIdAndRecipeId(u, r.recipeId())) {
+            var s = new SavedRecipe();
+            s.userId = u;
+            s.recipeId = r.recipeId();
+            saved.save(s);
+        }
+        return savedIds(u);
+    }
+
+    @Transactional
+    @DeleteMapping("/saved/{recipeId}")
+    public List<String> unsave(@RequestHeader(value = "Authorization", required = false) String auth, @PathVariable String recipeId) {
+        Long u = uid(auth);
+        saved.deleteByUserIdAndRecipeId(u, recipeId);
+        return savedIds(u);
+    }
+
+    @GetMapping("/shopping")
+    public List<ShoppingItem> shoppingList(@RequestHeader(value = "Authorization", required = false) String auth) {
+        return shopping.findByUserIdOrderById(uid(auth));
+    }
+
+    @PostMapping("/shopping")
+    public List<ShoppingItem> shoppingAdd(@RequestHeader(value = "Authorization", required = false) String auth, @RequestBody NamesReq r) {
+        Long u = uid(auth);
+        for (String name : matcher.canonical(r.names() == null ? List.of() : r.names()))
+            if (!shopping.existsByUserIdAndName(u, name)) {
+                var i = new ShoppingItem();
+                i.userId = u;
+                i.name = name;
+                shopping.save(i);
+            }
+        return shopping.findByUserIdOrderById(u);
+    }
+
+    @PatchMapping("/shopping/{id}")
+    public List<ShoppingItem> shoppingCheck(@RequestHeader(value = "Authorization", required = false) String auth, @PathVariable Long id, @RequestBody CheckedReq r) {
+        Long u = uid(auth);
+        shopping.findById(id).filter(i -> i.userId.equals(u)).ifPresent(i -> { i.checked = r.checked(); shopping.save(i); });
+        return shopping.findByUserIdOrderById(u);
+    }
+
+    @DeleteMapping("/shopping/{id}")
+    public List<ShoppingItem> shoppingRemove(@RequestHeader(value = "Authorization", required = false) String auth, @PathVariable Long id) {
+        Long u = uid(auth);
+        shopping.findById(id).filter(i -> i.userId.equals(u)).ifPresent(shopping::delete);
+        return shopping.findByUserIdOrderById(u);
+    }
+
+    /** Bought it: move checked items into the pantry and off the list. */
+    @PostMapping("/shopping/to-pantry")
+    public List<ShoppingItem> shoppingToPantry(@RequestHeader(value = "Authorization", required = false) String auth) {
+        Long u = uid(auth);
+        var done = shopping.findByUserIdOrderById(u).stream().filter(i -> i.checked).toList();
+        addAll(u, done.stream().map(i -> i.name).toList());
+        shopping.deleteAll(done);
+        return shopping.findByUserIdOrderById(u);
     }
 
     @GetMapping("/ingredients")

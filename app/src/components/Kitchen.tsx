@@ -94,6 +94,8 @@ export function Kitchen() {
     <View style={[s.topBar, s.gutter]}>
       <Text style={s.logo}>🍲 Bai</Text>
       <View style={s.row}>
+        <Pressable onPress={() => router.push('/saved')} accessibilityRole="button"><Text style={s.link}>♡ Saved</Text></Pressable>
+        <Pressable onPress={() => router.push('/list')} accessibilityRole="button"><Text style={s.link}>🛒 List</Text></Pressable>
         {mid && <Pressable onPress={() => setDrawer(!drawer)} accessibilityRole="button"><Text style={s.link}>🧺 Pantry ({items.length})</Text></Pressable>}
         <Pressable onPress={token ? logout : () => router.push('/login')} accessibilityRole="button"><Text style={s.link}>{token ? 'Log out' : 'Log in'}</Text></Pressable>
       </View>
