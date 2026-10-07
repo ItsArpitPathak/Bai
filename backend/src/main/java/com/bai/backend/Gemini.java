@@ -39,8 +39,13 @@ public class Gemini {
                 .POST(HttpRequest.BodyPublishers.ofString(JSON.writeValueAsString(body)))
                 .build();
         var res = http.send(req, HttpResponse.BodyHandlers.ofString());
-        if (res.statusCode() != 200) throw new IllegalStateException("Gemini returned " + res.statusCode());
-        return JSON.readTree(res.body()).path("candidates").path(0).path("content").path("parts").path(0).path("text").asString("");
+        if (res.statusCode() != 200) // body is Google's error JSON (never contains our key); shows up in server logs only
+            throw new IllegalStateException("Gemini " + model + " returned " + res.statusCode() + ": " + res.body().substring(0, Math.min(400, res.body().length())));
+        // join every text part (some models emit extra parts) instead of trusting parts[0]
+        var sb = new StringBuilder();
+        for (var part : JSON.readTree(res.body()).path("candidates").path(0).path("content").path("parts"))
+            if (!part.path("thought").asBoolean(false)) sb.append(part.path("text").asString(""));
+        return sb.toString();
     }
 
     static String prompt(List<String> pantry, List<String> catalog, String diet, List<String> avoid, Integer household, String extra) {
