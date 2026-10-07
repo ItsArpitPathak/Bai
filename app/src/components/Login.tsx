@@ -26,7 +26,7 @@ export function Login() {
       const guest = await loadGuest();
       if (guest.length) { await api('/pantry/bulk', t, 'POST', { names: guest }); await clearGuest(); }
       await login(t);
-      router.replace('/');
+      router.replace('/kitchen');
     } catch (e: any) { setErr(msg(e)); } finally { setBusy(false); }
   };
 
@@ -42,7 +42,7 @@ export function Login() {
           <Pressable style={[s.primaryBtn, busy && s.disabled]} disabled={busy} onPress={auth} accessibilityRole="button">
             {busy ? <ActivityIndicator color={c.onPrimary} /> : <Text style={s.primaryTxt}>{mode === 'login' ? 'Log in' : 'Create account'}</Text>}
           </Pressable>
-          <Pressable onPress={() => router.replace('/')} accessibilityRole="button">
+          <Pressable onPress={() => router.replace('/kitchen')} accessibilityRole="button">
             <Text style={s.link}>Continue as guest</Text>
           </Pressable>
           <Pressable onPress={() => { setMode(mode === 'login' ? 'register' : 'login'); setErr(''); }} accessibilityRole="button">
