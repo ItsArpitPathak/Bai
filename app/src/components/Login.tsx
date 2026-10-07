@@ -1,7 +1,9 @@
+import { useRouter } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { ActivityIndicator, Pressable, Text, TextInput, View } from 'react-native';
 import { api, msg } from '../api';
 import { useAuth } from '../auth';
+import { clearGuest, loadGuest } from '../store';
 import { makeStyles } from '../styles';
 import { useTheme } from '../theme';
 
@@ -9,6 +11,7 @@ export function Login() {
   const c = useTheme();
   const s = useMemo(() => makeStyles(c), [c]);
   const { login } = useAuth();
+  const router = useRouter();
   const [mode, setMode] = useState<'login' | 'register'>('login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -20,7 +23,10 @@ export function Login() {
       setErr(''); setBusy(true);
       const { token: t } = await api(`/auth/${mode}`, null, 'POST', { email, password });
       setPassword('');
+      const guest = await loadGuest();
+      if (guest.length) { await api('/pantry/bulk', t, 'POST', { names: guest }); await clearGuest(); }
       await login(t);
+      router.replace('/');
     } catch (e: any) { setErr(msg(e)); } finally { setBusy(false); }
   };
 
@@ -35,6 +41,9 @@ export function Login() {
           {err ? <Text style={s.error}>{err}</Text> : null}
           <Pressable style={[s.primaryBtn, busy && s.disabled]} disabled={busy} onPress={auth} accessibilityRole="button">
             {busy ? <ActivityIndicator color={c.onPrimary} /> : <Text style={s.primaryTxt}>{mode === 'login' ? 'Log in' : 'Create account'}</Text>}
+          </Pressable>
+          <Pressable onPress={() => router.replace('/')} accessibilityRole="button">
+            <Text style={s.link}>Continue as guest</Text>
           </Pressable>
           <Pressable onPress={() => { setMode(mode === 'login' ? 'register' : 'login'); setErr(''); }} accessibilityRole="button">
             <Text style={s.link}>{mode === 'login' ? 'New here? Create an account' : 'Have an account? Log in'}</Text>
