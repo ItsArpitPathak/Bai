@@ -1,6 +1,6 @@
 import { useColorScheme } from 'react-native';
 
-export const light = { bg: '#FBF7F1', surface: '#FFFFFF', text: '#1F2933', muted: '#6B7280', border: '#E9E1D6', primary: '#D9480F', onPrimary: '#FFFFFF', soft: '#FFF0E6', good: '#2F9E44', warn: '#E8890C', err: '#C92A2A' };
-export const dark = { bg: '#141210', surface: '#1F1C19', text: '#F4EFE8', muted: '#A39B90', border: '#322E29', primary: '#FF7A3D', onPrimary: '#1A0F08', soft: '#2B211A', good: '#51CF66', warn: '#FFA94D', err: '#FF8787' };
+export const light = { bg: '#FFF4E0', surface: '#FFFFFF', text: '#2B1B14', muted: '#7A5C4D', border: '#FFD9A8', primary: '#E8480F', onPrimary: '#FFFFFF', soft: '#FFE1CC', good: '#0B8F47', onGood: '#FFFFFF', warn: '#D9730D', err: '#D6264B' };
+export const dark = { bg: '#1E1033', surface: '#2D1B4E', text: '#FFF4E8', muted: '#C9B8E8', border: '#4A3377', primary: '#FF8A3D', onPrimary: '#2A1000', soft: '#43285F', good: '#4ADE80', onGood: '#06220F', warn: '#FFC14D', err: '#FF7A93' };
 
 export const useTheme = () => (useColorScheme() === 'dark' ? dark : light);

@@ -13,8 +13,8 @@ export type Result = {
 
 export const STAPLES = ['salt', 'oil', 'ghee', 'water', 'sugar'];
 export const TILE: Record<string, [string, string]> = {
-  dal: ['🫘', '#F2D7A6'], sabzi: ['🥔', '#CFE8C3'], roti: ['🫓', '#F3DFC1'], rice: ['🍚', '#E3E8F2'],
-  snack: ['🥟', '#F6D2C4'], sweet: ['🍮', '#F6D5E3'], side: ['🥣', '#D3EAE6'], drink: ['🍵', '#E5E0F5'],
+  dal: ['🫘', '#FFD166'], sabzi: ['🥔', '#8FD694'], roti: ['🫓', '#FFC48A'], rice: ['🍚', '#A5C8FF'],
+  snack: ['🥟', '#FF9E8A'], sweet: ['🍮', '#FF9FC8'], side: ['🥣', '#7ADBCB'], drink: ['🍵', '#C4A8FF'],
 };
 export const DIET: Record<string, string> = { veg: '🟢 Veg', egg: '🟡 Egg', nonveg: '🔴 Non-veg' };
 
@@ -31,7 +31,7 @@ export function RecipeCard({ r }: { r: Result }) {
   const bar = matchPct === 100 ? c.good : matchPct >= 50 ? c.warn : c.muted;
 
   return (
-    <Pressable onPress={() => router.push(`/recipe/${recipe.id}`)} style={s.recipe} accessibilityRole="button">
+    <Pressable onPress={() => router.push(`/recipe/${recipe.id}`)} style={s.recipe} accessibilityRole="link">
       <View style={s.recipeRow}>
         <View style={[s.tile, { backgroundColor: bg }]}><Text style={s.tileEmoji}>{emoji}</Text></View>
         <View style={{ flex: 1, minWidth: 0 }}>

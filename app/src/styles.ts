@@ -41,7 +41,7 @@ export const makeStyles = (c: typeof light) => StyleSheet.create({
   tog: { backgroundColor: c.bg, borderWidth: 1, borderColor: c.border, borderRadius: 999, paddingHorizontal: 12, paddingVertical: 6 },
   togOn: { backgroundColor: c.good, borderColor: c.good },
   togTxt: { color: c.text },
-  togTxtOn: { color: '#FFFFFF', fontWeight: '600' },
+  togTxtOn: { color: c.onGood, fontWeight: '600' },
   muted: { color: c.muted, fontSize: 14 },
   resultsHead: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline' },
   filters: { flexDirection: 'row', gap: 8, marginBottom: 12 },
