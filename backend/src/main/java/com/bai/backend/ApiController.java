@@ -1,6 +1,8 @@
 package com.bai.backend;
 
 import java.io.InputStream;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -19,6 +21,8 @@ public class ApiController {
     record TokenResp(String token) {}
     record RecipeReq(String recipeId) {}
     record CheckedReq(boolean checked) {}
+
+    static final Duration TOKEN_TTL = Duration.ofDays(30);
 
     private final Matcher matcher;
     private final List<Matcher.Recipe> recipes;
@@ -50,15 +54,17 @@ public class ApiController {
         var t = new AuthToken();
         t.token = UUID.randomUUID().toString();
         t.userId = userId;
+        t.expiresAt = Instant.now().plus(TOKEN_TTL);
         tokens.save(t);
         return new TokenResp(t.token);
     }
 
-    // ponytail: opaque tokens never expire; add expiry column if sessions must lapse
     private Long uid(String auth) {
         if (auth == null || !auth.startsWith("Bearer ")) throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
-        return tokens.findById(auth.substring(7)).map(t -> t.userId)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED));
+        var t = tokens.findById(auth.substring(7)).orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED));
+        if (t.expiresAt == null) { t.expiresAt = Instant.now().plus(TOKEN_TTL); tokens.save(t); } // pre-expiry token: start its clock now
+        else if (!t.live(Instant.now())) { tokens.delete(t); throw new ResponseStatusException(HttpStatus.UNAUTHORIZED); }
+        return t.userId;
     }
 
     @PostMapping("/auth/register")
