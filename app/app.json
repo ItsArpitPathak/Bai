@@ -2,6 +2,7 @@
   "expo": {
     "name": "Bai",
     "slug": "bai",
+    "scheme": "bai",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -27,6 +28,10 @@
         "projectId": "063958b2-0554-4285-ba7e-e70291736309"
       }
     },
-    "owner": "chars1"
+    "owner": "chars1",
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ]
   }
 }
