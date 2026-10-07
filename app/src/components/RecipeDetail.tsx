@@ -8,9 +8,8 @@ import { useLists } from '../lists';
 import { loadGuest } from '../store';
 import { makeStyles } from '../styles';
 import { useTheme } from '../theme';
+import { cap, SLOTS, weekDays, type Slot } from './Plan';
 import { DIET, STAPLES, TILE, type Recipe } from './RecipeCard';
-
-const cap = (x: string) => x[0].toUpperCase() + x.slice(1);
 
 function KeepAwake() { useKeepAwake(); return null; }
 
@@ -28,6 +27,10 @@ export function RecipeDetail() {
   const [err, setErr] = useState('');
   const [cook, setCook] = useState<number | null>(null);
   const [copied, setCopied] = useState(false);
+  const [planning, setPlanning] = useState(false);
+  const [pd, setPd] = useState(weekDays()[0].date);
+  const [ps, setPs] = useState<Slot>('dinner');
+  const [planned, setPlanned] = useState(false);
 
   useEffect(() => {
     api(`/recipes/${id}`, null).then(setRecipe).catch(e => setErr(e.message === 'Error 404' ? 'Recipe not found.' : msg(e)));
@@ -35,6 +38,10 @@ export function RecipeDetail() {
       .then(names => setHave(new Set(names))).catch(() => {});
   }, [id, token]);
 
+  const addToPlan = async () => {
+    if (!token) return router.push('/login');
+    try { await api('/plan', token, 'POST', { date: pd, slot: ps, recipeId: id }); setPlanned(true); setPlanning(false); } catch (e: any) { setErr(msg(e)); }
+  };
   const back = () => (router.canGoBack() ? router.back() : router.replace('/kitchen'));
   const share = async () => {
     if (Platform.OS === 'web') { await navigator.clipboard?.writeText(window.location.href).catch(() => {}); setCopied(true); }
@@ -110,7 +117,19 @@ export function RecipeDetail() {
         <Pressable style={[s.primaryBtn, { marginVertical: 16 }]} onPress={() => setCook(0)} accessibilityRole="button">
           <Text style={s.primaryTxt}>👩‍🍳 Start cooking</Text>
         </Pressable>
-        <View style={wide ? { flexDirection: 'row', gap: 24 } : undefined}>{ingredients}{steps}</View>
+        <Pressable onPress={() => (token ? setPlanning(!planning) : router.push('/login'))} accessibilityRole="button"><Text style={s.link}>{planned ? '✓ Added to plan' : '📅 Add to plan'}</Text></Pressable>
+        {planning && (
+          <View style={[s.card, { marginTop: 8 }]}>
+            <View style={s.filters}>{weekDays().map(d => (
+              <Pressable key={d.date} onPress={() => setPd(d.date)} style={[s.filter, pd === d.date && s.filterOn]} accessibilityRole="button" accessibilityState={{ selected: pd === d.date }}><Text style={[s.filterTxt, pd === d.date && s.filterTxtOn]}>{d.label}</Text></Pressable>
+            ))}</View>
+            <View style={s.filters}>{SLOTS.map(sl => (
+              <Pressable key={sl} onPress={() => setPs(sl)} style={[s.filter, ps === sl && s.filterOn]} accessibilityRole="button" accessibilityState={{ selected: ps === sl }}><Text style={[s.filterTxt, ps === sl && s.filterTxtOn]}>{cap(sl)}</Text></Pressable>
+            ))}</View>
+            <Pressable style={s.primaryBtn} onPress={addToPlan} accessibilityRole="button"><Text style={s.primaryTxt}>Add</Text></Pressable>
+          </View>
+        )}
+        <View style={[wide ? { flexDirection: 'row', gap: 24 } : undefined, { marginTop: 8 }]}>{ingredients}{steps}</View>
         <View style={s.chips}>{recipe.tags.map(t => <View key={t} style={s.chip}><Text style={s.chipTxt}>{t}</Text></View>)}</View>
       </ScrollView>
     </View>
