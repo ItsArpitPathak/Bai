@@ -6,6 +6,7 @@ import { useAuth } from '../auth';
 import { loadGuest, saveGuest } from '../store';
 import { makeStyles } from '../styles';
 import { useTheme } from '../theme';
+import { AiRecipes } from './AiRecipes';
 import { CategoryCard, type Category } from './CategoryCard';
 import { RecipeCard, type Result } from './RecipeCard';
 
@@ -177,6 +178,7 @@ export function Kitchen() {
       data={items.length ? match.results : []}
       keyExtractor={r => r.recipe.id}
       ListHeaderComponent={header}
+      ListFooterComponent={items.length ? <AiRecipes have={have} /> : null}
       ListEmptyComponent={matching ? null : (
         <View style={s.empty}>
           <Text style={s.emptyEmoji}>{items.length ? '🔍' : '🧺'}</Text>
