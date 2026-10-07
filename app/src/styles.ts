@@ -55,6 +55,7 @@ export const makeStyles = (c: typeof light) => StyleSheet.create({
   heroTitle: { fontSize: 36, fontWeight: '800', color: c.text, marginBottom: 16 },
   landRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 12, marginBottom: 24 },
   landCell: { flexGrow: 1, flexBasis: 260, minWidth: 0 },
+  planCell: { flexDirection: 'row', alignItems: 'center', gap: 6, backgroundColor: c.surface, borderWidth: 1, borderColor: c.border, borderRadius: 12, paddingHorizontal: 10, paddingVertical: 10 },
   cookBody: { flex: 1, justifyContent: 'center', padding: 24, gap: 16 },
   cookStep: { fontSize: 30, lineHeight: 40, fontWeight: '600', color: c.text },
   cookBtn: { flex: 1, backgroundColor: c.primary, borderRadius: 12, paddingVertical: 18, alignItems: 'center' },

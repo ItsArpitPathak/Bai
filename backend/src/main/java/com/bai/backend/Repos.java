@@ -24,3 +24,8 @@ interface ShoppingRepo extends JpaRepository<ShoppingItem, Long> {
     List<ShoppingItem> findByUserIdOrderById(Long userId);
     boolean existsByUserIdAndName(Long userId, String name);
 }
+
+interface PlanRepo extends JpaRepository<MealPlanEntry, Long> {
+    List<MealPlanEntry> findByUserIdOrderByDate(Long userId);
+    Optional<MealPlanEntry> findByUserIdAndDateAndSlot(Long userId, java.time.LocalDate date, String slot);
+}

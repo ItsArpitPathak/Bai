@@ -3,7 +3,9 @@ package com.bai.backend;
 import java.io.InputStream;
 import java.time.Duration;
 import java.time.Instant;
+import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Stream;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,6 +23,9 @@ public class ApiController {
     record TokenResp(String token) {}
     record RecipeReq(String recipeId) {}
     record CheckedReq(boolean checked) {}
+    record Profile(String diet, List<String> avoid, Integer householdSize) {}
+    record PlanReq(LocalDate date, String slot, String recipeId) {}
+    record PlanView(Long id, LocalDate date, String slot, String recipeId, String recipeName, int timeMinutes) {}
 
     static final Duration TOKEN_TTL = Duration.ofDays(30);
 
@@ -32,14 +37,16 @@ public class ApiController {
     private final PantryRepo pantry;
     private final SavedRepo saved;
     private final ShoppingRepo shopping;
+    private final PlanRepo plan;
     private final BCryptPasswordEncoder enc = new BCryptPasswordEncoder();
 
-    public ApiController(UserRepo users, TokenRepo tokens, PantryRepo pantry, SavedRepo saved, ShoppingRepo shopping) throws Exception {
+    public ApiController(UserRepo users, TokenRepo tokens, PantryRepo pantry, SavedRepo saved, ShoppingRepo shopping, PlanRepo plan) throws Exception {
         this.users = users;
         this.tokens = tokens;
         this.pantry = pantry;
         this.saved = saved;
         this.shopping = shopping;
+        this.plan = plan;
         var m = JsonMapper.builder().build();
         try (InputStream s = getClass().getResourceAsStream("/data/synonyms.json");
              InputStream r = getClass().getResourceAsStream("/data/recipes.json");
@@ -201,6 +208,67 @@ public class ApiController {
         return shopping.findByUserIdOrderById(u);
     }
 
+    private static List<String> split(String csv) {
+        return csv == null || csv.isBlank() ? List.of() : List.of(csv.split(","));
+    }
+
+    private Profile profileOf(AppUser u) { return new Profile(u.diet, split(u.avoid), u.householdSize); }
+
+    private AppUser user(Long id) {
+        return users.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED));
+    }
+
+    @GetMapping("/profile")
+    public Profile profile(@RequestHeader(value = "Authorization", required = false) String auth) {
+        return profileOf(user(uid(auth)));
+    }
+
+    @PutMapping("/profile")
+    public Profile saveProfile(@RequestHeader(value = "Authorization", required = false) String auth, @RequestBody Profile p) {
+        var u = user(uid(auth));
+        if (p.diet() != null && !Set.of("veg", "egg", "nonveg").contains(p.diet()))
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "diet must be veg, egg or nonveg");
+        if (p.householdSize() != null && (p.householdSize() < 1 || p.householdSize() > 20))
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "householdSize must be 1-20");
+        u.diet = p.diet();
+        u.avoid = String.join(",", matcher.canonical(p.avoid() == null ? List.of() : p.avoid()));
+        u.householdSize = p.householdSize();
+        return profileOf(users.save(u));
+    }
+
+    private List<PlanView> planOf(Long u) {
+        return plan.findByUserIdOrderByDate(u).stream().flatMap(e -> recipes.stream().filter(r -> r.id().equals(e.recipeId)).findFirst()
+                .map(r -> new PlanView(e.id, e.date, e.slot, e.recipeId, r.name(), r.timeMinutes())).stream()).toList();
+    }
+
+    @GetMapping("/plan")
+    public List<PlanView> planList(@RequestHeader(value = "Authorization", required = false) String auth) {
+        return planOf(uid(auth));
+    }
+
+    /** One recipe per date+slot: posting again swaps it. */
+    @PostMapping("/plan")
+    public List<PlanView> planSet(@RequestHeader(value = "Authorization", required = false) String auth, @RequestBody PlanReq r) {
+        Long u = uid(auth);
+        if (r.date() == null || !Set.of("breakfast", "lunch", "dinner").contains(r.slot()))
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "date and slot (breakfast, lunch, dinner) required");
+        if (recipes.stream().noneMatch(x -> x.id().equals(r.recipeId()))) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        var e = plan.findByUserIdAndDateAndSlot(u, r.date(), r.slot()).orElseGet(MealPlanEntry::new);
+        e.userId = u;
+        e.date = r.date();
+        e.slot = r.slot();
+        e.recipeId = r.recipeId();
+        plan.save(e);
+        return planOf(u);
+    }
+
+    @DeleteMapping("/plan/{id}")
+    public List<PlanView> planRemove(@RequestHeader(value = "Authorization", required = false) String auth, @PathVariable Long id) {
+        Long u = uid(auth);
+        plan.findById(id).filter(e -> e.userId.equals(u)).ifPresent(plan::delete);
+        return planOf(u);
+    }
+
     @GetMapping("/ingredients")
     public List<Map<String, Object>> ingredients() { return ingredients; }
 
@@ -214,7 +282,14 @@ public class ApiController {
                                   @RequestParam(required = false) List<String> include,
                                   @RequestParam(required = false) List<String> exclude,
                                   @RequestHeader(value = "Authorization", required = false) String auth) {
-        if (items == null) items = pantry.findByUserIdOrderByName(uid(auth)).stream().map(p -> p.name).toList();
+        if (items == null) {
+            Long u = uid(auth);
+            items = pantry.findByUserIdOrderByName(u).stream().map(p -> p.name).toList();
+            var me = user(u);
+            if (diet == null) diet = me.diet;
+            var avoid = split(me.avoid);
+            if (!avoid.isEmpty()) exclude = Stream.concat(exclude == null ? Stream.empty() : exclude.stream(), avoid.stream()).toList();
+        }
         return matcher.match(items, recipes, new Matcher.Filters(diet, mealType, maxTime, maxMissing, include, exclude));
     }
 
