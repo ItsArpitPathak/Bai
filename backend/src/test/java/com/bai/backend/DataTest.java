@@ -15,6 +15,14 @@ class DataTest {
         var cats = m.readValue(getClass().getResourceAsStream("/data/ingredients.json"), new TypeReference<List<Map<String, Object>>>() {});
         Map<String, Integer> count = new HashMap<>();
         for (var c : cats) for (Object i : (List<?>) c.get("items")) count.merge((String) i, 1, Integer::sum);
+        Set<String> ids = new HashSet<>();
+        for (var r : recipes) {
+            assertTrue(ids.add(r.id()), "duplicate id " + r.id());
+            assertTrue(Set.of("veg", "egg", "nonveg").contains(r.diet()), r.id());
+            assertTrue(Set.of("easy", "medium", "hard").contains(r.difficulty()), r.id());
+            assertTrue(r.timeMinutes() > 0 && !r.mealType().isEmpty() && !r.tags().isEmpty(), r.id());
+            assertEquals(r.veg(), r.diet().equals("veg"), r.id());
+        }
         for (var r : recipes) for (String i : r.ingredients()) {
             String n = matcher.norm(i);
             if (!Matcher.STAPLES.contains(n)) assertEquals(1, count.getOrDefault(n, 0), r.name() + ": " + n);

@@ -104,9 +104,21 @@ public class ApiController {
 
     /** Uses ?items= when given (anonymous), otherwise the logged-in user's pantry. */
     @GetMapping("/match")
-    public List<Matcher.Result> match(@RequestParam(required = false) List<String> items,
-                                      @RequestHeader(value = "Authorization", required = false) String auth) {
+    public Matcher.Response match(@RequestParam(required = false) List<String> items,
+                                  @RequestParam(required = false) String diet,
+                                  @RequestParam(required = false) String mealType,
+                                  @RequestParam(required = false) Integer maxTime,
+                                  @RequestParam(required = false) Integer maxMissing,
+                                  @RequestParam(required = false) List<String> include,
+                                  @RequestParam(required = false) List<String> exclude,
+                                  @RequestHeader(value = "Authorization", required = false) String auth) {
         if (items == null) items = pantry.findByUserIdOrderByName(uid(auth)).stream().map(p -> p.name).toList();
-        return matcher.match(items, recipes);
+        return matcher.match(items, recipes, new Matcher.Filters(diet, mealType, maxTime, maxMissing, include, exclude));
+    }
+
+    @GetMapping("/recipes/{id}")
+    public Matcher.Recipe recipe(@PathVariable String id) {
+        return recipes.stream().filter(r -> r.id().equals(id)).findFirst()
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 }
