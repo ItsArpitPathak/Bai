@@ -4,10 +4,11 @@ import { useEffect, useMemo, useState } from 'react';
 import { Platform, Pressable, ScrollView, Share, Text, View, useWindowDimensions } from 'react-native';
 import { api, msg } from '../api';
 import { useAuth } from '../auth';
+import { useLists } from '../lists';
 import { loadGuest } from '../store';
 import { makeStyles } from '../styles';
 import { useTheme } from '../theme';
-import { DIET, TILE, type Recipe } from './RecipeCard';
+import { DIET, STAPLES, TILE, type Recipe } from './RecipeCard';
 
 const cap = (x: string) => x[0].toUpperCase() + x.slice(1);
 
@@ -19,6 +20,8 @@ export function RecipeDetail() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const { token } = useAuth();
   const router = useRouter();
+  const { saved, toggleSave, addToList } = useLists();
+  const [added, setAdded] = useState(false);
   const { width } = useWindowDimensions();
   const [recipe, setRecipe] = useState<Recipe | null>(null);
   const [have, setHave] = useState<Set<string>>(new Set());
@@ -41,7 +44,10 @@ export function RecipeDetail() {
   const bar = (
     <View style={[s.topBar, s.gutter]}>
       <Pressable onPress={back} accessibilityRole="button"><Text style={s.link}>← Back</Text></Pressable>
-      <Pressable onPress={share} accessibilityRole="button"><Text style={s.link}>{copied ? 'Link copied ✓' : 'Share'}</Text></Pressable>
+      <View style={s.row}>
+        <Pressable onPress={() => recipe && toggleSave(recipe.id)} accessibilityRole="button"><Text style={s.link}>{recipe && saved.has(recipe.id) ? '♥ Saved' : '♡ Save'}</Text></Pressable>
+        <Pressable onPress={share} accessibilityRole="button"><Text style={s.link}>{copied ? 'Link copied ✓' : 'Share'}</Text></Pressable>
+      </View>
     </View>
   );
   if (!recipe) return <View style={s.screen}>{bar}<Text style={[s.emptyTxt, { marginTop: 32 }]}>{err || 'Loading…'}</Text></View>;
@@ -71,12 +77,16 @@ export function RecipeDetail() {
     </View>
   );
 
+  const missing = recipe.ingredients.filter(i => !have.has(i) && !STAPLES.includes(i));
   const ingredients = (
     <View style={wide ? { flex: 1 } : undefined}>
       <Text style={s.h2}>Ingredients</Text>
       {recipe.ingredients.map(i => (
-        <Text key={i} style={s.step}>{have.has(i) ? '✅' : '❌'}  {i}</Text>
+        <Text key={i} style={s.step}>{have.has(i) || STAPLES.includes(i) ? '✅' : '❌'}  {i}</Text>
       ))}
+      {missing.length > 0 && (
+        <Pressable onPress={() => addToList(missing).then(() => setAdded(true))} accessibilityRole="button"><Text style={s.link}>{added ? '✓ Added to list' : '+ Add missing to list'}</Text></Pressable>
+      )}
     </View>
   );
   const steps = (
