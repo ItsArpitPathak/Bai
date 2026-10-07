@@ -32,7 +32,7 @@ export function RecipeDetail() {
       .then(names => setHave(new Set(names))).catch(() => {});
   }, [id, token]);
 
-  const back = () => (router.canGoBack() ? router.back() : router.replace('/'));
+  const back = () => (router.canGoBack() ? router.back() : router.replace('/kitchen'));
   const share = async () => {
     if (Platform.OS === 'web') { await navigator.clipboard?.writeText(window.location.href).catch(() => {}); setCopied(true); }
     else await Share.share({ message: `${recipe?.name} on Bai` }).catch(() => {});
