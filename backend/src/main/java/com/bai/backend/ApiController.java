@@ -6,6 +6,7 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Stream;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
@@ -289,6 +290,7 @@ public class ApiController {
             String text = gemini.generate(Gemini.prompt(names, catalog, me.diet, split(me.avoid), me.householdSize, r == null ? null : r.prompt()));
             return Gemini.parse(text, matcher);
         } catch (Exception e) {
+            LoggerFactory.getLogger(ApiController.class).warn("AI generate failed: {}", e.toString());
             throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "AI could not make recipes right now. Try again later.");
         }
     }
