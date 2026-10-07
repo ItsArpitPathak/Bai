@@ -4,12 +4,11 @@ import { api, msg } from '../api';
 import { useAuth } from '../auth';
 import { makeStyles } from '../styles';
 import { useTheme } from '../theme';
+import { CategoryCard, type Category } from './CategoryCard';
 
 type Item = { id: number; name: string };
 type Result = { recipe: { name: string; veg: boolean; steps: string[] }; matchPct: number; missing: string[] };
 type Filter = 'all' | 'veg' | 'ready';
-
-const QUICK = ['potato', 'onion', 'tomato', 'rice', 'wheat flour', 'toor dal', 'moong dal', 'paneer', 'egg', 'milk', 'curd', 'spinach', 'peas', 'cauliflower'];
 
 export function Kitchen() {
   const c = useTheme();
@@ -23,6 +22,7 @@ export function Kitchen() {
   const [filter, setFilter] = useState<Filter>('all');
   const [open, setOpen] = useState<string | null>(null);
   const [err, setErr] = useState('');
+  const [cats, setCats] = useState<Category[]>([]);
 
 
   const refresh = async (t: string, list?: Item[]) => {
@@ -35,6 +35,8 @@ export function Kitchen() {
 
   useEffect(() => { if (token) refresh(token).catch(e => { setErr(msg(e)); if (!(e instanceof TypeError)) logout(); }); }, [token]);
 
+  useEffect(() => { api('/ingredients', null).then(setCats).catch(() => {}); }, []);
+
   const guard = async (fn: () => Promise<void>) => { try { setErr(''); await fn(); } catch (e: any) { setErr(msg(e)); } };
   const addName = (name: string) => guard(async () => {
     if (!name.trim() || !token) return;
@@ -45,6 +47,7 @@ export function Kitchen() {
   const del = (id: number) => guard(async () => { if (token) await refresh(token, await api(`/pantry/${id}`, token, 'DELETE')); });
 
   const have = new Set(items.map(i => i.name));
+  const toggle = (n: string) => { const i = items.find(x => x.name === n); return i ? del(i.id) : addName(n); };
   const shown = results.filter(r => filter === 'all' || (filter === 'veg' ? r.recipe.veg : r.matchPct === 100));
   const readyCount = results.filter(r => r.matchPct === 100).length;
   const barColor = (p: number) => (p === 100 ? c.good : p >= 50 ? c.warn : c.muted);
@@ -76,12 +79,7 @@ export function Kitchen() {
           </View>
         )}
 
-        <Text style={[s.muted, { marginTop: 12 }]}>Quick add</Text>
-        <View style={s.chips}>
-          {QUICK.filter(q => !have.has(q)).map(q => (
-            <Pressable key={q} onPress={() => addName(q)} style={s.quick}><Text style={s.quickTxt}>+ {q}</Text></Pressable>
-          ))}
-        </View>
+        {cats.map(cat => <CategoryCard key={cat.category} cat={cat} have={have} onToggle={toggle} />)}
       </View>
 
       <View style={s.resultsHead}>

@@ -18,6 +18,7 @@ public class ApiController {
 
     private final Matcher matcher;
     private final List<Matcher.Recipe> recipes;
+    private final List<Map<String, Object>> ingredients;
     private final UserRepo users;
     private final TokenRepo tokens;
     private final PantryRepo pantry;
@@ -29,9 +30,11 @@ public class ApiController {
         this.pantry = pantry;
         var m = JsonMapper.builder().build();
         try (InputStream s = getClass().getResourceAsStream("/data/synonyms.json");
-             InputStream r = getClass().getResourceAsStream("/data/recipes.json")) {
+             InputStream r = getClass().getResourceAsStream("/data/recipes.json");
+             InputStream i = getClass().getResourceAsStream("/data/ingredients.json")) {
             matcher = new Matcher(m.readValue(s, new TypeReference<Map<String, String>>() {}));
             recipes = m.readValue(r, new TypeReference<List<Matcher.Recipe>>() {});
+            ingredients = m.readValue(i, new TypeReference<List<Map<String, Object>>>() {});
         }
     }
 
@@ -95,6 +98,9 @@ public class ApiController {
         pantry.findById(id).filter(p -> p.userId.equals(u)).ifPresent(pantry::delete);
         return pantry.findByUserIdOrderByName(u);
     }
+
+    @GetMapping("/ingredients")
+    public List<Map<String, Object>> ingredients() { return ingredients; }
 
     /** Uses ?items= when given (anonymous), otherwise the logged-in user's pantry. */
     @GetMapping("/match")

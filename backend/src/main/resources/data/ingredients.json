@@ -1,0 +1,136 @@
+[
+ {
+  "category": "Atta & Grains",
+  "icon": "🌾",
+  "items": [
+   "rice",
+   "wheat flour",
+   "gram flour",
+   "semolina",
+   "bread",
+   "refined flour",
+   "flattened rice",
+   "maize flour",
+   "vermicelli",
+   "rice flour",
+   "sabudana",
+   "oats",
+   "puffed rice",
+   "sev",
+   "boondi"
+  ]
+ },
+ {
+  "category": "Dal & Pulses",
+  "icon": "🫘",
+  "items": [
+   "toor dal",
+   "moong dal",
+   "urad dal",
+   "chana dal",
+   "chickpeas",
+   "masoor dal",
+   "kidney beans",
+   "black eyed peas",
+   "black chickpeas",
+   "sprouted moong",
+   "moth beans"
+  ]
+ },
+ {
+  "category": "Masale",
+  "icon": "🌶️",
+  "items": [
+   "cumin",
+   "turmeric",
+   "chilli",
+   "mustard seeds",
+   "cardamom",
+   "tamarind",
+   "coriander seeds",
+   "fenugreek seeds",
+   "carom seeds",
+   "baking soda"
+  ]
+ },
+ {
+  "category": "Sabzi",
+  "icon": "🥔",
+  "items": [
+   "onion",
+   "tomato",
+   "garlic",
+   "potato",
+   "ginger",
+   "peas",
+   "carrot",
+   "coriander",
+   "capsicum",
+   "spinach",
+   "cauliflower",
+   "mint",
+   "brinjal",
+   "bottle gourd",
+   "cabbage",
+   "okra",
+   "curry leaves",
+   "cucumber",
+   "corn",
+   "green beans",
+   "mushroom",
+   "fenugreek",
+   "ridge gourd",
+   "bitter gourd",
+   "tinda",
+   "pumpkin",
+   "colocasia",
+   "radish",
+   "drumstick",
+   "beetroot",
+   "mustard greens"
+  ]
+ },
+ {
+  "category": "Dairy",
+  "icon": "🥛",
+  "items": [
+   "curd",
+   "paneer",
+   "cream",
+   "butter",
+   "milk",
+   "cheese"
+  ]
+ },
+ {
+  "category": "Fruits",
+  "icon": "🍌",
+  "items": [
+   "lemon",
+   "coconut",
+   "banana",
+   "apple"
+  ]
+ },
+ {
+  "category": "Meat & Eggs",
+  "icon": "🥚",
+  "items": [
+   "egg",
+   "chicken",
+   "mutton",
+   "fish",
+   "prawn"
+  ]
+ },
+ {
+  "category": "Sauces & Others",
+  "icon": "🫙",
+  "items": [
+   "peanuts",
+   "cashew",
+   "soy sauce",
+   "tea"
+  ]
+ }
+]
