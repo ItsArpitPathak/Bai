@@ -1,6 +1,6 @@
 import { useRouter } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
-import { ActivityIndicator, FlatList, Pressable, Text, TextInput, View } from 'react-native';
+import { ActivityIndicator, FlatList, Pressable, ScrollView, Text, TextInput, View, useWindowDimensions } from 'react-native';
 import { api, msg } from '../api';
 import { useAuth } from '../auth';
 import { loadGuest, saveGuest } from '../store';
@@ -84,14 +84,25 @@ export function Kitchen() {
     ...(k === 'missing1' && !f.missing1 ? { ready: false } : {}),
   }));
 
-  const header = (
-    <View>
-      <View style={s.topBar}>
-        <Text style={s.logo}>🍲 Bai</Text>
+  const { width } = useWindowDimensions();
+  const wide = width >= 1024, mid = width >= 768 && !wide;
+  const cols = width >= 1440 ? 3 : wide ? 2 : 1;
+  const [tab, setTab] = useState<'pantry' | 'recipes'>('pantry');
+  const [drawer, setDrawer] = useState(false);
+
+  const topBar = (
+    <View style={[s.topBar, s.gutter]}>
+      <Text style={s.logo}>🍲 Bai</Text>
+      <View style={s.row}>
+        {mid && <Pressable onPress={() => setDrawer(!drawer)} accessibilityRole="button"><Text style={s.link}>🧺 Pantry ({items.length})</Text></Pressable>}
         <Pressable onPress={token ? logout : () => router.push('/login')} accessibilityRole="button"><Text style={s.link}>{token ? 'Log out' : 'Log in'}</Text></Pressable>
       </View>
+    </View>
+  );
 
-      <View style={s.card}>
+  const pantry = (
+    <ScrollView style={wide ? s.side : s.list} contentContainerStyle={s.paneContent}>
+      <View style={[s.card, wide && s.cardFlat]}>
         <Text style={s.h2}>Your pantry</Text>
         <View style={s.row}>
           <TextInput value={text} onChangeText={setText} onSubmitEditing={() => addNames(text)} placeholder="Add or paste a list, e.g. aloo, pyaaz, atta" placeholderTextColor={c.muted} accessibilityLabel="Add pantry item" style={[s.input, { flex: 1, minWidth: 0, marginBottom: 0 }]} />
@@ -104,7 +115,7 @@ export function Kitchen() {
         {items.length > 0 && (
           <View style={s.chips}>
             {items.map(i => (
-              <Pressable key={i.id} onPress={() => del(i)} style={s.chip} accessibilityLabel={`Remove ${i.name}`}>
+              <Pressable key={i.name} onPress={() => del(i)} style={s.chip} accessibilityLabel={`Remove ${i.name}`}>
                 <Text style={s.chipTxt}>{i.name}  ✕</Text>
               </Pressable>
             ))}
@@ -113,7 +124,11 @@ export function Kitchen() {
 
         {cats.map(cat => <CategoryCard key={cat.category} cat={cat} have={have} onToggle={toggle} />)}
       </View>
+    </ScrollView>
+  );
 
+  const header = (
+    <View>
       {items.length > 0 && (
         <View>
           <Text style={s.headline} accessibilityLiveRegion="polite" aria-live="polite">You can make {match.count} recipe{match.count === 1 ? '' : 's'}</Text>
@@ -149,20 +164,46 @@ export function Kitchen() {
     </View>
   );
 
+  const recipes = (
+    <FlatList
+      key={cols}
+      style={s.list}
+      contentContainerStyle={s.listContent}
+      numColumns={cols}
+      columnWrapperStyle={cols > 1 ? { gap: 12 } : undefined}
+      data={items.length ? match.results : []}
+      keyExtractor={r => r.recipe.id}
+      ListHeaderComponent={header}
+      ListEmptyComponent={matching ? null : (
+        <View style={s.empty}>
+          <Text style={s.emptyEmoji}>{items.length ? '🔍' : '🧺'}</Text>
+          <Text style={s.emptyTxt}>{items.length ? 'No recipes match these filters yet. Try adding more items.' : 'Add ingredients to get started. Every ingredient unlocks more recipes.\nWe assume salt, oil, ghee, water, sugar.'}</Text>
+        </View>
+      )}
+      renderItem={({ item: r }) => <View style={{ flex: 1 }}><RecipeCard r={r} /></View>}
+    />
+  );
+
+  if (wide) return <View style={s.screen}>{topBar}<View style={s.split}>{pantry}{recipes}</View></View>;
+  if (mid) return (
+    <View style={s.screen}>
+      {topBar}
+      {recipes}
+      {drawer && <Pressable style={s.backdrop} onPress={() => setDrawer(false)} accessibilityLabel="Close pantry" />}
+      {drawer && <View style={s.drawer}>{pantry}</View>}
+    </View>
+  );
   return (
-      <FlatList
-        style={s.list}
-        contentContainerStyle={s.listContent}
-        data={items.length ? match.results : []}
-        keyExtractor={r => r.recipe.id}
-        ListHeaderComponent={header}
-        ListEmptyComponent={matching ? null : (
-          <View style={s.empty}>
-            <Text style={s.emptyEmoji}>{items.length ? '🔍' : '🧺'}</Text>
-            <Text style={s.emptyTxt}>{items.length ? 'No recipes match these filters yet. Try adding more items.' : 'Add ingredients to get started. Every ingredient unlocks more recipes.\nWe assume salt, oil, ghee, water, sugar.'}</Text>
-          </View>
-        )}
-        renderItem={({ item: r }) => <RecipeCard r={r} />}
-      />
+    <View style={s.screen}>
+      {topBar}
+      {tab === 'pantry' ? pantry : recipes}
+      <View style={s.tabs}>
+        {([['pantry', `🧺 Pantry (${items.length})`], ['recipes', `🍲 Recipes (${match.count})`]] as const).map(([k, label]) => (
+          <Pressable key={k} onPress={() => setTab(k)} style={[s.tab, tab === k && s.tabOn]} accessibilityRole="button" accessibilityState={{ selected: tab === k }}>
+            <Text style={[s.tabTxt, tab === k && s.tabTxtOn]}>{label}</Text>
+          </Pressable>
+        ))}
+      </View>
+    </View>
   );
 }
