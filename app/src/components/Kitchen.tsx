@@ -5,10 +5,15 @@ import { useAuth } from '../auth';
 import { makeStyles } from '../styles';
 import { useTheme } from '../theme';
 import { CategoryCard, type Category } from './CategoryCard';
+import { RecipeCard, type Result } from './RecipeCard';
 
 type Item = { id: number; name: string };
-type Result = { recipe: { name: string; veg: boolean; steps: string[] }; matchPct: number; missing: string[] };
-type Filter = 'all' | 'veg' | 'ready';
+type Filters = { veg: boolean; ready: boolean; missing1: boolean; quick: boolean; meal: string | null };
+type Match = { count: number; results: Result[]; suggest: string[] };
+const PILLS = [
+  { key: 'veg', label: '🟢 Veg' }, { key: 'ready', label: '✅ Ready now' }, { key: 'missing1', label: 'Missing 1' }, { key: 'quick', label: '⏱ ≤30 min' },
+] as const;
+const MEALS = ['breakfast', 'lunch', 'dinner', 'snack'];
 
 export function Kitchen() {
   const c = useTheme();
@@ -17,21 +22,33 @@ export function Kitchen() {
 
   const [items, setItems] = useState<Item[]>([]);
   const [text, setText] = useState('');
-  const [results, setResults] = useState<Result[]>([]);
+  const [match, setMatch] = useState<Match>({ count: 0, results: [], suggest: [] });
   const [matching, setMatching] = useState(false);
-  const [filter, setFilter] = useState<Filter>('all');
-  const [open, setOpen] = useState<string | null>(null);
+  const [filters, setFilters] = useState<Filters>({ veg: false, ready: false, missing1: false, quick: false, meal: null });
   const [err, setErr] = useState('');
   const [cats, setCats] = useState<Category[]>([]);
 
 
-  const refresh = async (t: string, list?: Item[]) => {
-    const l: Item[] = list ?? await api('/pantry', t);
-    setItems(l);
-    setMatching(true);
-    try { setResults(l.length ? (await api('/match', t)).results : []); } finally { setMatching(false); }
-  };
+  const refresh = async (t: string, list?: Item[]) => setItems(list ?? await api('/pantry', t));
 
+  // debounced: every toggle or filter change re-queries the matcher
+  useEffect(() => {
+    if (!token) return;
+    if (!items.length) { setMatch({ count: 0, results: [], suggest: [] }); return; }
+    const q = new URLSearchParams();
+    if (filters.veg) q.set('diet', 'veg');
+    if (filters.ready || filters.missing1) q.set('maxMissing', filters.ready ? '0' : '1');
+    if (filters.quick) q.set('maxTime', '30');
+    if (filters.meal) q.set('mealType', filters.meal);
+    let live = true;
+    const h = setTimeout(async () => {
+      setMatching(true);
+      try { const m = await api('/match?' + q, token); if (live) setMatch(m); }
+      catch (e: any) { if (live) setErr(msg(e)); }
+      finally { if (live) setMatching(false); }
+    }, 250);
+    return () => { live = false; clearTimeout(h); };
+  }, [token, items, filters]);
 
   useEffect(() => { if (token) refresh(token).catch(e => { setErr(msg(e)); if (!(e instanceof TypeError)) logout(); }); }, [token]);
 
@@ -48,9 +65,11 @@ export function Kitchen() {
 
   const have = new Set(items.map(i => i.name));
   const toggle = (n: string) => { const i = items.find(x => x.name === n); return i ? del(i.id) : addName(n); };
-  const shown = results.filter(r => filter === 'all' || (filter === 'veg' ? r.recipe.veg : r.matchPct === 100));
-  const readyCount = results.filter(r => r.matchPct === 100).length;
-  const barColor = (p: number) => (p === 100 ? c.good : p >= 50 ? c.warn : c.muted);
+  const flip = (k: 'veg' | 'ready' | 'missing1' | 'quick') => setFilters(f => ({
+    ...f, [k]: !f[k],
+    ...(k === 'ready' && !f.ready ? { missing1: false } : {}),
+    ...(k === 'missing1' && !f.missing1 ? { ready: false } : {}),
+  }));
 
   const header = (
     <View>
@@ -82,17 +101,35 @@ export function Kitchen() {
         {cats.map(cat => <CategoryCard key={cat.category} cat={cat} have={have} onToggle={toggle} />)}
       </View>
 
-      <View style={s.resultsHead}>
-        <Text style={s.h2}>What to cook</Text>
-        {items.length > 0 && <Text style={s.muted}>{readyCount} ready now · {results.length} total</Text>}
-      </View>
       {items.length > 0 && (
-        <View style={s.filters}>
-          {(['all', 'veg', 'ready'] as Filter[]).map(f => (
-            <Pressable key={f} onPress={() => setFilter(f)} style={[s.filter, filter === f && s.filterOn]} accessibilityRole="button">
-              <Text style={[s.filterTxt, filter === f && s.filterTxtOn]}>{f === 'all' ? 'All' : f === 'veg' ? '🟢 Veg' : '✅ Ready now'}</Text>
-            </Pressable>
-          ))}
+        <View>
+          <Text style={s.headline} accessibilityLiveRegion="polite" aria-live="polite">You can make {match.count} recipe{match.count === 1 ? '' : 's'}</Text>
+          {match.suggest.length > 0 && (
+            <View style={s.chips}>
+              <Text style={s.muted}>Do you have?</Text>
+              {match.suggest.map(n => (
+                <Pressable key={n} onPress={() => addName(n)} style={s.quick} accessibilityRole="button" accessibilityLabel={`Add ${n}`}><Text style={s.quickTxt}>+ {n}</Text></Pressable>
+              ))}
+            </View>
+          )}
+          <View style={s.filters}>
+            {PILLS.map(({ key, label }) => {
+              const on = filters[key];
+              return (
+                <Pressable key={key} onPress={() => flip(key)} style={[s.filter, on && s.filterOn]} accessibilityRole="button" accessibilityState={{ selected: on }}>
+                  <Text style={[s.filterTxt, on && s.filterTxtOn]}>{label}</Text>
+                </Pressable>
+              );
+            })}
+            {MEALS.map(m => {
+              const on = filters.meal === m;
+              return (
+                <Pressable key={m} onPress={() => setFilters(f => ({ ...f, meal: on ? null : m }))} style={[s.filter, on && s.filterOn]} accessibilityRole="button" accessibilityState={{ selected: on }}>
+                  <Text style={[s.filterTxt, on && s.filterTxtOn]}>{m[0].toUpperCase() + m.slice(1)}</Text>
+                </Pressable>
+              );
+            })}
+          </View>
         </View>
       )}
       {matching && <ActivityIndicator color={c.primary} style={{ marginVertical: 12 }} />}
@@ -103,33 +140,16 @@ export function Kitchen() {
       <FlatList
         style={s.list}
         contentContainerStyle={s.listContent}
-        data={shown}
-        keyExtractor={r => r.recipe.name}
+        data={items.length ? match.results : []}
+        keyExtractor={r => r.recipe.id}
         ListHeaderComponent={header}
         ListEmptyComponent={matching ? null : (
           <View style={s.empty}>
             <Text style={s.emptyEmoji}>{items.length ? '🔍' : '🧺'}</Text>
-            <Text style={s.emptyTxt}>{items.length ? 'No recipes match this filter yet. Try adding more items.' : 'Your pantry is empty. Add a few items above and Bai will suggest what to cook.'}</Text>
+            <Text style={s.emptyTxt}>{items.length ? 'No recipes match these filters yet. Try adding more items.' : 'Add ingredients to get started. Every ingredient unlocks more recipes.\nWe assume salt, oil, ghee, water, sugar.'}</Text>
           </View>
         )}
-        renderItem={({ item: r }) => {
-          const isOpen = open === r.recipe.name;
-          return (
-            <Pressable onPress={() => setOpen(isOpen ? null : r.recipe.name)} style={s.recipe} accessibilityRole="button">
-              <View style={s.recipeTop}>
-                <Text style={s.recipeName}>{r.recipe.veg ? '🟢' : '🔴'}  {r.recipe.name}</Text>
-                <Text style={[s.pct, { color: barColor(r.matchPct) }]}>{r.matchPct}%</Text>
-              </View>
-              <View style={s.bar}><View style={[s.barFill, { width: `${r.matchPct}%`, backgroundColor: barColor(r.matchPct) }]} /></View>
-              <Text style={s.muted}>{r.missing.length ? `Need: ${r.missing.join(', ')}` : 'You have everything ✨'}</Text>
-              {isOpen ? (
-                <View style={s.steps}>
-                  {r.recipe.steps.map((st, i) => <Text key={i} style={s.step}>{i + 1}. {st}</Text>)}
-                </View>
-              ) : <Text style={s.hint}>Tap for steps</Text>}
-            </Pressable>
-          );
-        }}
+        renderItem={({ item: r }) => <RecipeCard r={r} />}
       />
   );
 }
