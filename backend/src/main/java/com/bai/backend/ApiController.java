@@ -24,9 +24,11 @@ public class ApiController {
     record RecipeReq(String recipeId) {}
     record CheckedReq(boolean checked) {}
     record Profile(String diet, List<String> avoid, Integer householdSize) {}
+    record GenReq(String prompt) {}
     record PlanReq(LocalDate date, String slot, String recipeId) {}
     record PlanView(Long id, LocalDate date, String slot, String recipeId, String recipeName, int timeMinutes) {}
 
+    static final int DAILY_GENERATIONS = 5;
     static final Duration TOKEN_TTL = Duration.ofDays(30);
 
     private final Matcher matcher;
@@ -38,15 +40,17 @@ public class ApiController {
     private final SavedRepo saved;
     private final ShoppingRepo shopping;
     private final PlanRepo plan;
+    private final Gemini gemini;
     private final BCryptPasswordEncoder enc = new BCryptPasswordEncoder();
 
-    public ApiController(UserRepo users, TokenRepo tokens, PantryRepo pantry, SavedRepo saved, ShoppingRepo shopping, PlanRepo plan) throws Exception {
+    public ApiController(UserRepo users, TokenRepo tokens, PantryRepo pantry, SavedRepo saved, ShoppingRepo shopping, PlanRepo plan, Gemini gemini) throws Exception {
         this.users = users;
         this.tokens = tokens;
         this.pantry = pantry;
         this.saved = saved;
         this.shopping = shopping;
         this.plan = plan;
+        this.gemini = gemini;
         var m = JsonMapper.builder().build();
         try (InputStream s = getClass().getResourceAsStream("/data/synonyms.json");
              InputStream r = getClass().getResourceAsStream("/data/recipes.json");
@@ -267,6 +271,26 @@ public class ApiController {
         Long u = uid(auth);
         plan.findById(id).filter(e -> e.userId.equals(u)).ifPresent(plan::delete);
         return planOf(u);
+    }
+
+    /** Login required, 5 a day. Returns up to 3 AI recipes (not persisted; ids start with "ai-"). */
+    @PostMapping("/generate")
+    public List<Matcher.Recipe> generate(@RequestHeader(value = "Authorization", required = false) String auth, @RequestBody(required = false) GenReq r) {
+        Long u = uid(auth);
+        if (!gemini.enabled()) throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE, "AI generation is not configured");
+        var names = pantry.findByUserIdOrderByName(u).stream().map(p -> p.name).toList();
+        if (names.isEmpty()) throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Add some ingredients first");
+        var me = user(u);
+        if (!me.tryGenerate(LocalDate.now(), DAILY_GENERATIONS))
+            throw new ResponseStatusException(HttpStatus.TOO_MANY_REQUESTS, "Daily limit of " + DAILY_GENERATIONS + " AI recipes reached");
+        users.save(me); // quota is spent on attempt, so failures cannot be retried in a loop
+        var catalog = ingredients.stream().flatMap(c -> ((List<?>) c.get("items")).stream()).map(String::valueOf).toList();
+        try {
+            String text = gemini.generate(Gemini.prompt(names, catalog, me.diet, split(me.avoid), me.householdSize, r == null ? null : r.prompt()));
+            return Gemini.parse(text, matcher);
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "AI could not make recipes right now. Try again later.");
+        }
     }
 
     @GetMapping("/ingredients")
