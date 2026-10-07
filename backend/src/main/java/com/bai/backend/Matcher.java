@@ -24,6 +24,11 @@ public class Matcher {
         return synonyms.getOrDefault(k, k);
     }
 
+    /** Synonym-normalized, blank-free, deduped, order kept. */
+    public List<String> canonical(List<String> names) {
+        return names.stream().map(this::norm).filter(n -> !n.isEmpty()).distinct().toList();
+    }
+
     private Set<String> normAll(List<String> l) {
         return l == null ? Set.of() : l.stream().map(this::norm).collect(Collectors.toSet());
     }

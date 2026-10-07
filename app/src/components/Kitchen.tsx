@@ -1,7 +1,9 @@
+import { useRouter } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
 import { ActivityIndicator, FlatList, Pressable, Text, TextInput, View } from 'react-native';
 import { api, msg } from '../api';
 import { useAuth } from '../auth';
+import { loadGuest, saveGuest } from '../store';
 import { makeStyles } from '../styles';
 import { useTheme } from '../theme';
 import { CategoryCard, type Category } from './CategoryCard';
@@ -19,6 +21,7 @@ export function Kitchen() {
   const c = useTheme();
   const s = useMemo(() => makeStyles(c), [c]);
   const { token, logout } = useAuth();
+  const router = useRouter();
 
   const [items, setItems] = useState<Item[]>([]);
   const [text, setText] = useState('');
@@ -28,18 +31,17 @@ export function Kitchen() {
   const [err, setErr] = useState('');
   const [cats, setCats] = useState<Category[]>([]);
 
-
-  const refresh = async (t: string, list?: Item[]) => setItems(list ?? await api('/pantry', t));
+  const setGuest = (names: string[]) => { setItems(names.map(name => ({ id: -1, name }))); saveGuest(names); };
 
   // debounced: every toggle or filter change re-queries the matcher
   useEffect(() => {
-    if (!token) return;
     if (!items.length) { setMatch({ count: 0, results: [], suggest: [] }); return; }
     const q = new URLSearchParams();
     if (filters.veg) q.set('diet', 'veg');
     if (filters.ready || filters.missing1) q.set('maxMissing', filters.ready ? '0' : '1');
     if (filters.quick) q.set('maxTime', '30');
     if (filters.meal) q.set('mealType', filters.meal);
+    if (!token) q.set('items', items.map(i => i.name).join(','));
     let live = true;
     const h = setTimeout(async () => {
       setMatching(true);
@@ -50,21 +52,32 @@ export function Kitchen() {
     return () => { live = false; clearTimeout(h); };
   }, [token, items, filters]);
 
-  useEffect(() => { if (token) refresh(token).catch(e => { setErr(msg(e)); if (!(e instanceof TypeError)) logout(); }); }, [token]);
+  useEffect(() => {
+    if (!token) { loadGuest().then(names => setItems(names.map(name => ({ id: -1, name })))); return; }
+    api('/pantry', token).then(setItems).catch(e => { setErr(msg(e)); if (!(e instanceof TypeError)) logout(); });
+  }, [token]);
 
   useEffect(() => { api('/ingredients', null).then(setCats).catch(() => {}); }, []);
 
   const guard = async (fn: () => Promise<void>) => { try { setErr(''); await fn(); } catch (e: any) { setErr(msg(e)); } };
-  const addName = (name: string) => guard(async () => {
-    if (!name.trim() || !token) return;
-    const l = await api('/pantry', token, 'POST', { name });
+  // text may be a pasted list: comma or newline separated, Hindi or English
+  const addNames = (raw: string) => guard(async () => {
+    const names = raw.split(/[,\n]/).map(x => x.trim()).filter(Boolean);
+    if (!names.length) return;
+    if (token) setItems(await api('/pantry/bulk', token, 'POST', { names }));
+    else {
+      const canon: string[] = await api('/canonical?names=' + encodeURIComponent(names.join(',')), null);
+      setGuest([...new Set([...items.map(i => i.name), ...canon])].sort());
+    }
     setText('');
-    await refresh(token, l);
   });
-  const del = (id: number) => guard(async () => { if (token) await refresh(token, await api(`/pantry/${id}`, token, 'DELETE')); });
+  const del = (i: Item) => guard(async () => {
+    if (token) setItems(await api(`/pantry/${i.id}`, token, 'DELETE'));
+    else setGuest(items.filter(x => x.name !== i.name).map(x => x.name));
+  });
 
   const have = new Set(items.map(i => i.name));
-  const toggle = (n: string) => { const i = items.find(x => x.name === n); return i ? del(i.id) : addName(n); };
+  const toggle = (n: string) => { const i = items.find(x => x.name === n); return i ? del(i) : addNames(n); };
   const flip = (k: 'veg' | 'ready' | 'missing1' | 'quick') => setFilters(f => ({
     ...f, [k]: !f[k],
     ...(k === 'ready' && !f.ready ? { missing1: false } : {}),
@@ -75,14 +88,14 @@ export function Kitchen() {
     <View>
       <View style={s.topBar}>
         <Text style={s.logo}>🍲 Bai</Text>
-        <Pressable onPress={logout} accessibilityRole="button"><Text style={s.link}>Log out</Text></Pressable>
+        <Pressable onPress={token ? logout : () => router.push('/login')} accessibilityRole="button"><Text style={s.link}>{token ? 'Log out' : 'Log in'}</Text></Pressable>
       </View>
 
       <View style={s.card}>
         <Text style={s.h2}>Your pantry</Text>
         <View style={s.row}>
-          <TextInput value={text} onChangeText={setText} onSubmitEditing={() => addName(text)} placeholder="Add an item, e.g. aloo, pyaaz, atta" placeholderTextColor={c.muted} accessibilityLabel="Add pantry item" style={[s.input, { flex: 1, minWidth: 0, marginBottom: 0 }]} />
-          <Pressable style={[s.addBtn, !text.trim() && s.disabled]} disabled={!text.trim()} onPress={() => addName(text)} accessibilityRole="button" accessibilityLabel="Add to pantry">
+          <TextInput value={text} onChangeText={setText} onSubmitEditing={() => addNames(text)} placeholder="Add or paste a list, e.g. aloo, pyaaz, atta" placeholderTextColor={c.muted} accessibilityLabel="Add pantry item" style={[s.input, { flex: 1, minWidth: 0, marginBottom: 0 }]} />
+          <Pressable style={[s.addBtn, !text.trim() && s.disabled]} disabled={!text.trim()} onPress={() => addNames(text)} accessibilityRole="button" accessibilityLabel="Add to pantry">
             <Text style={s.primaryTxt}>Add</Text>
           </Pressable>
         </View>
@@ -91,7 +104,7 @@ export function Kitchen() {
         {items.length > 0 && (
           <View style={s.chips}>
             {items.map(i => (
-              <Pressable key={i.id} onPress={() => del(i.id)} style={s.chip} accessibilityLabel={`Remove ${i.name}`}>
+              <Pressable key={i.id} onPress={() => del(i)} style={s.chip} accessibilityLabel={`Remove ${i.name}`}>
                 <Text style={s.chipTxt}>{i.name}  ✕</Text>
               </Pressable>
             ))}
@@ -108,7 +121,7 @@ export function Kitchen() {
             <View style={s.chips}>
               <Text style={s.muted}>Do you have?</Text>
               {match.suggest.map(n => (
-                <Pressable key={n} onPress={() => addName(n)} style={s.quick} accessibilityRole="button" accessibilityLabel={`Add ${n}`}><Text style={s.quickTxt}>+ {n}</Text></Pressable>
+                <Pressable key={n} onPress={() => addNames(n)} style={s.quick} accessibilityRole="button" accessibilityLabel={`Add ${n}`}><Text style={s.quickTxt}>+ {n}</Text></Pressable>
               ))}
             </View>
           )}

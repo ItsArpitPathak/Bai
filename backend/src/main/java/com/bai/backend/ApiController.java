@@ -14,6 +14,7 @@ import tools.jackson.databind.json.JsonMapper;
 public class ApiController {
     record Creds(String email, String password) {}
     record NameReq(String name) {}
+    record NamesReq(List<String> names) {}
     record TokenResp(String token) {}
 
     private final Matcher matcher;
@@ -81,16 +82,30 @@ public class ApiController {
     @PostMapping("/pantry")
     public List<PantryItem> add(@RequestHeader(value = "Authorization", required = false) String auth, @RequestBody NameReq r) {
         Long u = uid(auth);
-        String name = r.name() == null ? "" : r.name().trim().toLowerCase();
-        if (name.isEmpty()) throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Name required");
-        if (!pantry.existsByUserIdAndName(u, name)) {
-            var p = new PantryItem();
-            p.userId = u;
-            p.name = name;
-            pantry.save(p);
-        }
+        if (r.name() == null || r.name().isBlank()) throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Name required");
+        return addAll(u, List.of(r.name()));
+    }
+
+    /** Pasted lists and guest-pantry merge at login: canonicalize, dedupe, insert. */
+    @PostMapping("/pantry/bulk")
+    public List<PantryItem> bulk(@RequestHeader(value = "Authorization", required = false) String auth, @RequestBody NamesReq r) {
+        return addAll(uid(auth), r.names() == null ? List.of() : r.names());
+    }
+
+    private List<PantryItem> addAll(Long u, List<String> names) {
+        for (String name : matcher.canonical(names))
+            if (!pantry.existsByUserIdAndName(u, name)) {
+                var p = new PantryItem();
+                p.userId = u;
+                p.name = name;
+                pantry.save(p);
+            }
         return pantry.findByUserIdOrderByName(u);
     }
+
+    /** Lets guests (no pantry on the server) get the same canonical names the pantry stores. */
+    @GetMapping("/canonical")
+    public List<String> canonical(@RequestParam List<String> names) { return matcher.canonical(names); }
 
     @DeleteMapping("/pantry/{id}")
     public List<PantryItem> remove(@RequestHeader(value = "Authorization", required = false) String auth, @PathVariable Long id) {

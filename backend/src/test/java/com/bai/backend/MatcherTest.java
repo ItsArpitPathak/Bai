@@ -18,6 +18,11 @@ class MatcherTest {
     static List<String> ids(Matcher.Response r) { return r.results().stream().map(x -> x.recipe().id()).toList(); }
 
     @Test
+    void canonicalizesAndDedupes() {
+        assertEquals(List.of("potato", "onion", "rice"), m.canonical(List.of("Aloo", " potato ", "pyaaz", "", "Rice")));
+    }
+
+    @Test
     void ranksAndNormalizes() {
         var r = m.match(List.of("Aloo", "pyaaz"), List.of(b, a)).results();
         assertEquals("A", r.get(0).recipe().name());
