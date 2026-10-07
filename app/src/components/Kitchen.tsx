@@ -29,7 +29,7 @@ export function Kitchen() {
     const l: Item[] = list ?? await api('/pantry', t);
     setItems(l);
     setMatching(true);
-    try { setResults(l.length ? await api('/match', t) : []); } finally { setMatching(false); }
+    try { setResults(l.length ? (await api('/match', t)).results : []); } finally { setMatching(false); }
   };
 
 

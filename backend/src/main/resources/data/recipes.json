@@ -1,2618 +1,4572 @@
 [
-{
-"name": "Aloo Sabzi",
-"veg": true,
-"ingredients": [
-"potato",
-"onion",
-"tomato",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Temper cumin",
-"Saute onion, tomato",
-"Add potato, turmeric, cook covered"
-]
-},
-{
-"name": "Aloo Jeera",
-"veg": true,
-"ingredients": [
-"potato",
-"cumin",
-"turmeric"
-],
-"steps": [
-"Boil and cube potato",
-"Temper cumin",
-"Toss potato with turmeric"
-]
-},
-{
-"name": "Aloo Gobi",
-"veg": true,
-"ingredients": [
-"potato",
-"cauliflower",
-"onion",
-"tomato",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Temper cumin",
-"Saute onion, tomato",
-"Add aloo, gobi, cook covered"
-]
-},
-{
-"name": "Aloo Matar",
-"veg": true,
-"ingredients": [
-"potato",
-"peas",
-"onion",
-"tomato",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Temper cumin",
-"Make onion-tomato masala",
-"Add potato, peas, simmer"
-]
-},
-{
-"name": "Aloo Paratha",
-"veg": true,
-"ingredients": [
-"potato",
-"wheat flour",
-"onion",
-"chilli"
-],
-"steps": [
-"Mash potato with onion, chilli",
-"Stuff into dough",
-"Roll and roast with ghee"
-]
-},
-{
-"name": "Aloo Tikki",
-"veg": true,
-"ingredients": [
-"potato",
-"bread",
-"peas"
-],
-"steps": [
-"Mash potato, peas",
-"Shape patties",
-"Shallow fry"
-]
-},
-{
-"name": "Aloo Baingan",
-"veg": true,
-"ingredients": [
-"potato",
-"brinjal",
-"onion",
-"tomato",
-"turmeric"
-],
-"steps": [
-"Fry onion, tomato",
-"Add brinjal, potato",
-"Cook covered"
-]
-},
-{
-"name": "Aloo Palak",
-"veg": true,
-"ingredients": [
-"potato",
-"spinach",
-"onion",
-"garlic",
-"cumin"
-],
-"steps": [
-"Temper cumin, garlic",
-"Add onion, potato",
-"Add spinach, cook down"
-]
-},
-{
-"name": "Aloo Methi",
-"veg": true,
-"ingredients": [
-"potato",
-"fenugreek",
-"onion",
-"cumin"
-],
-"steps": [
-"Temper cumin",
-"Add potato, onion",
-"Add methi, cook dry"
-]
-},
-{
-"name": "Aloo Pyaaz",
-"veg": true,
-"ingredients": [
-"potato",
-"onion",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Temper cumin",
-"Fry onion",
-"Add potato, turmeric, cook covered"
-]
-},
-{
-"name": "Dum Aloo",
-"veg": true,
-"ingredients": [
-"potato",
-"curd",
-"onion",
-"tomato",
-"ginger",
-"garlic"
-],
-"steps": [
-"Fry boiled potato",
-"Cook masala with curd",
-"Simmer potato in gravy"
-]
-},
-{
-"name": "Jeera Aloo Fry",
-"veg": true,
-"ingredients": [
-"potato",
-"cumin",
-"coriander"
-],
-"steps": [
-"Fry potato cubes",
-"Add cumin",
-"Finish with coriander"
-]
-},
-{
-"name": "Gobi Sabzi",
-"veg": true,
-"ingredients": [
-"cauliflower",
-"potato",
-"tomato",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Temper cumin",
-"Add tomato, spices",
-"Add gobi, potato, cook covered"
-]
-},
-{
-"name": "Gobi Manchurian Dry",
-"veg": true,
-"ingredients": [
-"cauliflower",
-"gram flour",
-"capsicum",
-"garlic",
-"soy sauce"
-],
-"steps": [
-"Batter and fry gobi",
-"Saute garlic, capsicum",
-"Toss with soy sauce"
-]
-},
-{
-"name": "Gobi Paratha",
-"veg": true,
-"ingredients": [
-"cauliflower",
-"wheat flour",
-"chilli",
-"coriander"
-],
-"steps": [
-"Grate and squeeze gobi",
-"Stuff dough",
-"Roast with ghee"
-]
-},
-{
-"name": "Bhindi Fry",
-"veg": true,
-"ingredients": [
-"okra",
-"onion",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Dry and chop okra",
-"Fry with cumin, onion",
-"Add turmeric, cook till crisp"
-]
-},
-{
-"name": "Bhindi Masala",
-"veg": true,
-"ingredients": [
-"okra",
-"onion",
-"tomato",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Fry okra",
-"Make onion-tomato masala",
-"Mix and cook"
-]
-},
-{
-"name": "Baingan Bharta",
-"veg": true,
-"ingredients": [
-"brinjal",
-"onion",
-"tomato",
-"garlic",
-"chilli"
-],
-"steps": [
-"Roast brinjal, peel, mash",
-"Saute onion, garlic, tomato",
-"Mix in brinjal"
-]
-},
-{
-"name": "Bharwa Baingan",
-"veg": true,
-"ingredients": [
-"brinjal",
-"gram flour",
-"peanuts",
-"coriander"
-],
-"steps": [
-"Make stuffing of besan, peanut",
-"Stuff brinjal",
-"Cook covered"
-]
-},
-{
-"name": "Lauki Sabzi",
-"veg": true,
-"ingredients": [
-"bottle gourd",
-"tomato",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Temper cumin",
-"Add tomato, lauki",
-"Cook till soft"
-]
-},
-{
-"name": "Lauki Chana Dal",
-"veg": true,
-"ingredients": [
-"bottle gourd",
-"chana dal",
-"tomato",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Pressure cook dal with lauki",
-"Temper cumin",
-"Mix"
-]
-},
-{
-"name": "Turai Sabzi",
-"veg": true,
-"ingredients": [
-"ridge gourd",
-"onion",
-"tomato",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Temper cumin",
-"Add onion, tomato",
-"Add turai, cook covered"
-]
-},
-{
-"name": "Karela Fry",
-"veg": true,
-"ingredients": [
-"bitter gourd",
-"onion",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Salt and squeeze karela",
-"Fry with onion",
-"Season and crisp"
-]
-},
-{
-"name": "Tinda Masala",
-"veg": true,
-"ingredients": [
-"tinda",
-"onion",
-"tomato",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Temper cumin",
-"Masala of onion, tomato",
-"Add tinda, simmer"
-]
-},
-{
-"name": "Kaddu Sabzi",
-"veg": true,
-"ingredients": [
-"pumpkin",
-"fenugreek seeds",
-"turmeric",
-"chilli"
-],
-"steps": [
-"Temper methi seeds",
-"Add pumpkin, turmeric",
-"Cook till soft"
-]
-},
-{
-"name": "Arbi Fry",
-"veg": true,
-"ingredients": [
-"colocasia",
-"carom seeds",
-"turmeric",
-"chilli"
-],
-"steps": [
-"Boil, peel, slice arbi",
-"Temper ajwain",
-"Fry till crisp"
-]
-},
-{
-"name": "Mooli Paratha",
-"veg": true,
-"ingredients": [
-"radish",
-"wheat flour",
-"chilli",
-"coriander"
-],
-"steps": [
-"Grate and squeeze mooli",
-"Stuff dough",
-"Roast with ghee"
-]
-},
-{
-"name": "Matar Paneer",
-"veg": true,
-"ingredients": [
-"peas",
-"paneer",
-"onion",
-"tomato",
-"ginger",
-"garlic"
-],
-"steps": [
-"Make onion-tomato masala",
-"Add peas",
-"Add paneer, simmer"
-]
-},
-{
-"name": "Palak Paneer",
-"veg": true,
-"ingredients": [
-"spinach",
-"paneer",
-"onion",
-"tomato",
-"garlic",
-"ginger"
-],
-"steps": [
-"Blanch and puree spinach",
-"Saute onion, tomato, ginger, garlic",
-"Add puree and paneer"
-]
-},
-{
-"name": "Paneer Butter Masala",
-"veg": true,
-"ingredients": [
-"paneer",
-"tomato",
-"butter",
-"cream",
-"onion"
-],
-"steps": [
-"Cook tomato, onion, blend",
-"Add butter, cream",
-"Add paneer"
-]
-},
-{
-"name": "Kadai Paneer",
-"veg": true,
-"ingredients": [
-"paneer",
-"capsicum",
-"onion",
-"tomato",
-"coriander seeds"
-],
-"steps": [
-"Fry capsicum, onion",
-"Add tomato, ground coriander",
-"Add paneer"
-]
-},
-{
-"name": "Paneer Bhurji",
-"veg": true,
-"ingredients": [
-"paneer",
-"onion",
-"tomato",
-"turmeric",
-"chilli"
-],
-"steps": [
-"Saute onion, tomato, chilli",
-"Add turmeric",
-"Crumble paneer, cook"
-]
-},
-{
-"name": "Shahi Paneer",
-"veg": true,
-"ingredients": [
-"paneer",
-"cream",
-"onion",
-"cashew",
-"tomato"
-],
-"steps": [
-"Blend onion, cashew, tomato",
-"Simmer with cream",
-"Add paneer"
-]
-},
-{
-"name": "Paneer Tikka",
-"veg": true,
-"ingredients": [
-"paneer",
-"curd",
-"capsicum",
-"onion",
-"chilli"
-],
-"steps": [
-"Marinate paneer in curd",
-"Skewer with veg",
-"Grill or pan sear"
-]
-},
-{
-"name": "Palak Dal",
-"veg": true,
-"ingredients": [
-"toor dal",
-"spinach",
-"garlic",
-"cumin",
-"turmeric"
-],
-"steps": [
-"Pressure cook dal with turmeric",
-"Wilt spinach",
-"Temper cumin, garlic, mix"
-]
-},
-{
-"name": "Dal Tadka",
-"veg": true,
-"ingredients": [
-"toor dal",
-"onion",
-"tomato",
-"garlic",
-"cumin",
-"turmeric"
-],
-"steps": [
-"Pressure cook dal with turmeric",
-"Temper cumin, garlic, onion, tomato",
-"Mix and simmer"
-]
-},
-{
-"name": "Dal Fry",
-"veg": true,
-"ingredients": [
-"toor dal",
-"onion",
-"tomato",
-"garlic",
-"cumin",
-"turmeric"
-],
-"steps": [
-"Cook dal soft",
-"Fry onion, tomato, garlic",
-"Combine and boil"
-]
-},
-{
-"name": "Moong Dal",
-"veg": true,
-"ingredients": [
-"moong dal",
-"turmeric",
-"cumin",
-"ginger"
-],
-"steps": [
-"Cook dal with turmeric",
-"Temper cumin, ginger",
-"Pour over"
-]
-},
-{
-"name": "Masoor Dal",
-"veg": true,
-"ingredients": [
-"masoor dal",
-"onion",
-"tomato",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Cook dal with turmeric",
-"Temper cumin, onion, tomato",
-"Mix"
-]
-},
-{
-"name": "Chana Dal",
-"veg": true,
-"ingredients": [
-"chana dal",
-"onion",
-"tomato",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Soak and pressure cook dal",
-"Temper masala",
-"Mix and simmer"
-]
-},
-{
-"name": "Urad Dal",
-"veg": true,
-"ingredients": [
-"urad dal",
-"onion",
-"tomato",
-"ginger",
-"garlic"
-],
-"steps": [
-"Cook dal",
-"Fry onion, ginger, garlic, tomato",
-"Combine"
-]
-},
-{
-"name": "Dal Makhani",
-"veg": true,
-"ingredients": [
-"urad dal",
-"kidney beans",
-"butter",
-"tomato",
-"cream",
-"ginger",
-"garlic"
-],
-"steps": [
-"Cook dal, rajma long",
-"Make tomato masala with butter",
-"Simmer together, add cream"
-]
-},
-{
-"name": "Sambar",
-"veg": true,
-"ingredients": [
-"toor dal",
-"tomato",
-"tamarind",
-"drumstick",
-"mustard seeds",
-"onion"
-],
-"steps": [
-"Cook dal",
-"Boil veg with tamarind",
-"Mix, temper mustard seeds"
-]
-},
-{
-"name": "Rasam",
-"veg": true,
-"ingredients": [
-"tomato",
-"tamarind",
-"toor dal",
-"mustard seeds",
-"garlic"
-],
-"steps": [
-"Boil tomato, tamarind, spices",
-"Add dal water",
-"Temper mustard seeds"
-]
-},
-{
-"name": "Rajma",
-"veg": true,
-"ingredients": [
-"kidney beans",
-"onion",
-"tomato",
-"ginger",
-"garlic"
-],
-"steps": [
-"Soak, pressure cook rajma",
-"Cook onion, tomato masala",
-"Simmer rajma in masala"
-]
-},
-{
-"name": "Chole",
-"veg": true,
-"ingredients": [
-"chickpeas",
-"onion",
-"tomato",
-"ginger",
-"garlic",
-"tea"
-],
-"steps": [
-"Soak, boil chickpeas with tea",
-"Make onion-tomato masala",
-"Simmer together"
-]
-},
-{
-"name": "Chana Masala",
-"veg": true,
-"ingredients": [
-"chickpeas",
-"onion",
-"tomato",
-"ginger",
-"garlic"
-],
-"steps": [
-"Boil chickpeas",
-"Make masala",
-"Simmer together"
-]
-},
-{
-"name": "Lobia Masala",
-"veg": true,
-"ingredients": [
-"black eyed peas",
-"onion",
-"tomato",
-"turmeric"
-],
-"steps": [
-"Soak and cook lobia",
-"Make masala",
-"Combine"
-]
-},
-{
-"name": "Kala Chana",
-"veg": true,
-"ingredients": [
-"black chickpeas",
-"onion",
-"tomato",
-"turmeric"
-],
-"steps": [
-"Soak and pressure cook chana",
-"Temper masala",
-"Mix"
-]
-},
-{
-"name": "Moong Sprouts Sabzi",
-"veg": true,
-"ingredients": [
-"sprouted moong",
-"onion",
-"tomato",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Temper cumin",
-"Saute onion, tomato",
-"Add sprouts, cook"
-]
-},
-{
-"name": "Kadhi Pakora",
-"veg": true,
-"ingredients": [
-"curd",
-"gram flour",
-"onion",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Whisk curd, besan, turmeric",
-"Boil till thick",
-"Add fried pakoras, temper"
-]
-},
-{
-"name": "Gujarati Kadhi",
-"veg": true,
-"ingredients": [
-"curd",
-"gram flour",
-"mustard seeds",
-"ginger",
-"sugar"
-],
-"steps": [
-"Whisk curd, besan",
-"Cook with ginger",
-"Temper mustard seeds"
-]
-},
-{
-"name": "Jeera Rice",
-"veg": true,
-"ingredients": [
-"rice",
-"cumin"
-],
-"steps": [
-"Temper cumin in ghee",
-"Add washed rice and water",
-"Cook until fluffy"
-]
-},
-{
-"name": "Plain Rice",
-"veg": true,
-"ingredients": [
-"rice"
-],
-"steps": [
-"Wash rice",
-"Cook with water",
-"Fluff"
-]
-},
-{
-"name": "Khichdi",
-"veg": true,
-"ingredients": [
-"rice",
-"moong dal",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Rinse rice and dal",
-"Pressure cook with turmeric",
-"Temper cumin"
-]
-},
-{
-"name": "Masala Khichdi",
-"veg": true,
-"ingredients": [
-"rice",
-"moong dal",
-"onion",
-"tomato",
-"peas",
-"cumin"
-],
-"steps": [
-"Saute onion, tomato",
-"Add rice, dal, peas",
-"Pressure cook"
-]
-},
-{
-"name": "Vegetable Pulao",
-"veg": true,
-"ingredients": [
-"rice",
-"peas",
-"carrot",
-"onion",
-"cumin"
-],
-"steps": [
-"Fry cumin, onion",
-"Add veg, rice, water",
-"Cook covered"
-]
-},
-{
-"name": "Matar Pulao",
-"veg": true,
-"ingredients": [
-"rice",
-"peas",
-"cumin",
-"onion"
-],
-"steps": [
-"Fry cumin, onion",
-"Add peas, rice",
-"Cook covered"
-]
-},
-{
-"name": "Tomato Rice",
-"veg": true,
-"ingredients": [
-"rice",
-"tomato",
-"onion",
-"mustard seeds"
-],
-"steps": [
-"Temper mustard seeds",
-"Cook onion, tomato",
-"Mix with rice"
-]
-},
-{
-"name": "Lemon Rice",
-"veg": true,
-"ingredients": [
-"rice",
-"lemon",
-"peanuts",
-"mustard seeds",
-"turmeric"
-],
-"steps": [
-"Temper mustard seeds, peanuts",
-"Add turmeric, rice",
-"Squeeze lemon"
-]
-},
-{
-"name": "Curd Rice",
-"veg": true,
-"ingredients": [
-"rice",
-"curd",
-"mustard seeds",
-"chilli"
-],
-"steps": [
-"Mash cooked rice with curd",
-"Temper mustard seeds, chilli",
-"Mix"
-]
-},
-{
-"name": "Coconut Rice",
-"veg": true,
-"ingredients": [
-"rice",
-"coconut",
-"mustard seeds",
-"chilli"
-],
-"steps": [
-"Temper mustard seeds, chilli",
-"Add coconut",
-"Mix with rice"
-]
-},
-{
-"name": "Veg Biryani",
-"veg": true,
-"ingredients": [
-"rice",
-"potato",
-"carrot",
-"peas",
-"onion",
-"curd",
-"mint"
-],
-"steps": [
-"Marinate veg in curd",
-"Layer with par-cooked rice",
-"Dum cook"
-]
-},
-{
-"name": "Egg Fried Rice",
-"veg": false,
-"ingredients": [
-"rice",
-"egg",
-"onion",
-"carrot",
-"soy sauce"
-],
-"steps": [
-"Scramble egg",
-"Stir fry veg",
-"Add rice, soy sauce"
-]
-},
-{
-"name": "Egg Biryani",
-"veg": false,
-"ingredients": [
-"rice",
-"egg",
-"onion",
-"curd",
-"mint"
-],
-"steps": [
-"Boil eggs",
-"Layer with masala and rice",
-"Dum cook"
-]
-},
-{
-"name": "Chicken Biryani",
-"veg": false,
-"ingredients": [
-"rice",
-"chicken",
-"onion",
-"curd",
-"mint",
-"ginger",
-"garlic"
-],
-"steps": [
-"Marinate chicken in curd",
-"Layer with par-cooked rice",
-"Dum cook"
-]
-},
-{
-"name": "Roti",
-"veg": true,
-"ingredients": [
-"wheat flour"
-],
-"steps": [
-"Knead dough with water",
-"Roll rounds",
-"Roast on tawa"
-]
-},
-{
-"name": "Phulka",
-"veg": true,
-"ingredients": [
-"wheat flour"
-],
-"steps": [
-"Knead soft dough",
-"Roll thin",
-"Puff on flame"
-]
-},
-{
-"name": "Paratha",
-"veg": true,
-"ingredients": [
-"wheat flour"
-],
-"steps": [
-"Knead dough",
-"Roll, fold with ghee",
-"Roast till golden"
-]
-},
-{
-"name": "Methi Thepla",
-"veg": true,
-"ingredients": [
-"wheat flour",
-"fenugreek",
-"curd",
-"turmeric"
-],
-"steps": [
-"Knead flour, methi, curd",
-"Roll thin",
-"Roast with oil"
-]
-},
-{
-"name": "Missi Roti",
-"veg": true,
-"ingredients": [
-"wheat flour",
-"gram flour",
-"onion",
-"cumin"
-],
-"steps": [
-"Mix flours, onion, cumin",
-"Knead",
-"Roast"
-]
-},
-{
-"name": "Besan Chilla",
-"veg": true,
-"ingredients": [
-"gram flour",
-"onion",
-"tomato",
-"chilli",
-"coriander"
-],
-"steps": [
-"Make batter",
-"Add onion, tomato, chilli",
-"Cook thin pancakes"
-]
-},
-{
-"name": "Puri",
-"veg": true,
-"ingredients": [
-"wheat flour"
-],
-"steps": [
-"Knead stiff dough",
-"Roll small rounds",
-"Deep fry"
-]
-},
-{
-"name": "Poori Bhaji",
-"veg": true,
-"ingredients": [
-"wheat flour",
-"potato",
-"onion",
-"tomato"
-],
-"steps": [
-"Fry puri",
-"Cook aloo bhaji",
-"Serve together"
-]
-},
-{
-"name": "Bhatura",
-"veg": true,
-"ingredients": [
-"refined flour",
-"curd",
-"baking soda"
-],
-"steps": [
-"Knead dough with curd",
-"Rest",
-"Roll and deep fry"
-]
-},
-{
-"name": "Naan Tawa",
-"veg": true,
-"ingredients": [
-"refined flour",
-"curd",
-"baking soda"
-],
-"steps": [
-"Knead with curd",
-"Rest",
-"Roll and cook on tawa"
-]
-},
-{
-"name": "Poha",
-"veg": true,
-"ingredients": [
-"flattened rice",
-"onion",
-"peanuts",
-"turmeric",
-"mustard seeds",
-"lemon"
-],
-"steps": [
-"Rinse poha",
-"Temper mustard seeds, peanuts, onion",
-"Add turmeric, poha, lemon"
-]
-},
-{
-"name": "Upma",
-"veg": true,
-"ingredients": [
-"semolina",
-"onion",
-"mustard seeds",
-"chilli",
-"curry leaves"
-],
-"steps": [
-"Roast semolina",
-"Temper mustard seeds, onion",
-"Add water, semolina"
-]
-},
-{
-"name": "Vegetable Upma",
-"veg": true,
-"ingredients": [
-"semolina",
-"onion",
-"carrot",
-"peas",
-"mustard seeds"
-],
-"steps": [
-"Roast semolina",
-"Temper, add veg",
-"Add water, cook"
-]
-},
-{
-"name": "Idli",
-"veg": true,
-"ingredients": [
-"rice",
-"urad dal"
-],
-"steps": [
-"Soak, grind rice and dal",
-"Ferment overnight",
-"Steam"
-]
-},
-{
-"name": "Dosa",
-"veg": true,
-"ingredients": [
-"rice",
-"urad dal"
-],
-"steps": [
-"Soak, grind, ferment",
-"Spread on tawa",
-"Cook crisp"
-]
-},
-{
-"name": "Rava Dosa",
-"veg": true,
-"ingredients": [
-"semolina",
-"rice flour",
-"curd",
-"onion"
-],
-"steps": [
-"Mix batter",
-"Pour thin on tawa",
-"Cook crisp"
-]
-},
-{
-"name": "Masala Dosa",
-"veg": true,
-"ingredients": [
-"rice",
-"urad dal",
-"potato",
-"onion",
-"mustard seeds"
-],
-"steps": [
-"Make dosa",
-"Prepare potato filling",
-"Fill and fold"
-]
-},
-{
-"name": "Uttapam",
-"veg": true,
-"ingredients": [
-"rice",
-"urad dal",
-"onion",
-"tomato",
-"chilli"
-],
-"steps": [
-"Ferment batter",
-"Pour thick, top veg",
-"Cook both sides"
-]
-},
-{
-"name": "Medu Vada",
-"veg": true,
-"ingredients": [
-"urad dal",
-"chilli",
-"ginger",
-"curry leaves"
-],
-"steps": [
-"Grind soaked dal",
-"Shape rings",
-"Deep fry"
-]
-},
-{
-"name": "Sabudana Khichdi",
-"veg": true,
-"ingredients": [
-"sabudana",
-"potato",
-"peanuts",
-"cumin",
-"chilli"
-],
-"steps": [
-"Soak sabudana",
-"Temper cumin, potato",
-"Add sabudana, peanuts"
-]
-},
-{
-"name": "Moong Dal Chilla",
-"veg": true,
-"ingredients": [
-"moong dal",
-"onion",
-"ginger",
-"chilli"
-],
-"steps": [
-"Soak, grind dal",
-"Add onion, ginger",
-"Cook pancakes"
-]
-},
-{
-"name": "Oats Upma",
-"veg": true,
-"ingredients": [
-"oats",
-"onion",
-"carrot",
-"mustard seeds"
-],
-"steps": [
-"Roast oats",
-"Temper veg",
-"Add water, oats"
-]
-},
-{
-"name": "Dhokla",
-"veg": true,
-"ingredients": [
-"gram flour",
-"curd",
-"lemon",
-"mustard seeds"
-],
-"steps": [
-"Make batter with besan, curd",
-"Steam",
-"Temper mustard seeds"
-]
-},
-{
-"name": "Khaman",
-"veg": true,
-"ingredients": [
-"gram flour",
-"lemon",
-"mustard seeds",
-"sugar"
-],
-"steps": [
-"Make batter",
-"Steam",
-"Pour tempering"
-]
-},
-{
-"name": "Handvo",
-"veg": true,
-"ingredients": [
-"rice",
-"toor dal",
-"bottle gourd",
-"mustard seeds"
-],
-"steps": [
-"Ferment batter with lauki",
-"Temper",
-"Bake or pan cook"
-]
-},
-{
-"name": "Thalipeeth",
-"veg": true,
-"ingredients": [
-"wheat flour",
-"gram flour",
-"onion",
-"coriander"
-],
-"steps": [
-"Mix flours, onion",
-"Pat thin on pan",
-"Cook with oil"
-]
-},
-{
-"name": "Pav Bhaji",
-"veg": true,
-"ingredients": [
-"potato",
-"peas",
-"tomato",
-"onion",
-"capsicum",
-"butter",
-"bread"
-],
-"steps": [
-"Boil and mash veg",
-"Cook with butter masala",
-"Serve with pav"
-]
-},
-{
-"name": "Misal Pav",
-"veg": true,
-"ingredients": [
-"moth beans",
-"onion",
-"tomato",
-"bread",
-"coconut"
-],
-"steps": [
-"Sprout, cook moth beans",
-"Make spicy curry",
-"Top with farsan"
-]
-},
-{
-"name": "Sev Tamatar",
-"veg": true,
-"ingredients": [
-"tomato",
-"gram flour",
-"onion",
-"cumin"
-],
-"steps": [
-"Cook tomato gravy",
-"Add sev",
-"Serve"
-]
-},
-{
-"name": "Bread Pakora",
-"veg": true,
-"ingredients": [
-"bread",
-"gram flour",
-"potato",
-"chilli"
-],
-"steps": [
-"Stuff bread with potato",
-"Dip in batter",
-"Deep fry"
-]
-},
-{
-"name": "Bread Upma",
-"veg": true,
-"ingredients": [
-"bread",
-"onion",
-"tomato",
-"mustard seeds"
-],
-"steps": [
-"Cube bread",
-"Temper, add onion, tomato",
-"Toss bread"
-]
-},
-{
-"name": "Bread Omelette",
-"veg": false,
-"ingredients": [
-"bread",
-"egg",
-"onion",
-"chilli"
-],
-"steps": [
-"Beat egg with onion, chilli",
-"Cook omelette",
-"Sandwich in bread"
-]
-},
-{
-"name": "Pakora",
-"veg": true,
-"ingredients": [
-"gram flour",
-"onion",
-"chilli",
-"coriander"
-],
-"steps": [
-"Mix batter with onion",
-"Drop spoonfuls",
-"Deep fry"
-]
-},
-{
-"name": "Onion Bhaji",
-"veg": true,
-"ingredients": [
-"onion",
-"gram flour",
-"chilli",
-"coriander"
-],
-"steps": [
-"Slice onion",
-"Coat in batter",
-"Deep fry"
-]
-},
-{
-"name": "Samosa",
-"veg": true,
-"ingredients": [
-"potato",
-"refined flour",
-"peas",
-"cumin"
-],
-"steps": [
-"Make dough",
-"Fill spiced potato peas",
-"Deep fry"
-]
-},
-{
-"name": "Poha Cutlet",
-"veg": true,
-"ingredients": [
-"flattened rice",
-"potato",
-"onion"
-],
-"steps": [
-"Mix soaked poha, potato",
-"Shape",
-"Shallow fry"
-]
-},
-{
-"name": "Veg Cutlet",
-"veg": true,
-"ingredients": [
-"potato",
-"carrot",
-"peas",
-"bread"
-],
-"steps": [
-"Mash veg",
-"Shape",
-"Shallow fry"
-]
-},
-{
-"name": "Sandwich Veg",
-"veg": true,
-"ingredients": [
-"bread",
-"potato",
-"tomato",
-"cucumber",
-"onion"
-],
-"steps": [
-"Slice veg",
-"Layer on bread",
-"Toast"
-]
-},
-{
-"name": "Cheese Sandwich",
-"veg": true,
-"ingredients": [
-"bread",
-"cheese",
-"butter"
-],
-"steps": [
-"Butter bread",
-"Add cheese",
-"Toast"
-]
-},
-{
-"name": "Corn Chaat",
-"veg": true,
-"ingredients": [
-"corn",
-"onion",
-"tomato",
-"lemon",
-"chilli"
-],
-"steps": [
-"Boil corn",
-"Toss with onion, tomato",
-"Squeeze lemon"
-]
-},
-{
-"name": "Chana Chaat",
-"veg": true,
-"ingredients": [
-"chickpeas",
-"onion",
-"tomato",
-"lemon",
-"coriander"
-],
-"steps": [
-"Boil chickpeas",
-"Mix veg",
-"Squeeze lemon"
-]
-},
-{
-"name": "Fruit Chaat",
-"veg": true,
-"ingredients": [
-"banana",
-"apple",
-"lemon",
-"chilli"
-],
-"steps": [
-"Chop fruit",
-"Toss with lemon",
-"Sprinkle masala"
-]
-},
-{
-"name": "Bhel Puri",
-"veg": true,
-"ingredients": [
-"puffed rice",
-"onion",
-"tomato",
-"tamarind",
-"sev"
-],
-"steps": [
-"Toss puffed rice with veg",
-"Add tamarind chutney",
-"Top with sev"
-]
-},
-{
-"name": "Egg Bhurji",
-"veg": false,
-"ingredients": [
-"egg",
-"onion",
-"tomato",
-"chilli",
-"turmeric"
-],
-"steps": [
-"Saute onion, tomato, chilli",
-"Add eggs",
-"Scramble"
-]
-},
-{
-"name": "Egg Curry",
-"veg": false,
-"ingredients": [
-"egg",
-"onion",
-"tomato",
-"ginger",
-"garlic",
-"turmeric"
-],
-"steps": [
-"Boil eggs",
-"Make onion-tomato masala",
-"Simmer eggs in masala"
-]
-},
-{
-"name": "Anda Masala",
-"veg": false,
-"ingredients": [
-"egg",
-"onion",
-"tomato",
-"ginger",
-"garlic"
-],
-"steps": [
-"Boil eggs, fry lightly",
-"Cook masala",
-"Add eggs"
-]
-},
-{
-"name": "Masala Omelette",
-"veg": false,
-"ingredients": [
-"egg",
-"onion",
-"tomato",
-"chilli",
-"coriander"
-],
-"steps": [
-"Beat egg with veg",
-"Pour on pan",
-"Cook both sides"
-]
-},
-{
-"name": "Boiled Egg Fry",
-"veg": false,
-"ingredients": [
-"egg",
-"onion",
-"turmeric",
-"chilli"
-],
-"steps": [
-"Boil eggs",
-"Fry onion",
-"Toss eggs"
-]
-},
-{
-"name": "Chicken Curry",
-"veg": false,
-"ingredients": [
-"chicken",
-"onion",
-"tomato",
-"ginger",
-"garlic",
-"turmeric"
-],
-"steps": [
-"Fry onion, ginger, garlic",
-"Add tomato, chicken",
-"Simmer till cooked"
-]
-},
-{
-"name": "Butter Chicken",
-"veg": false,
-"ingredients": [
-"chicken",
-"butter",
-"tomato",
-"cream",
-"onion"
-],
-"steps": [
-"Grill or fry chicken",
-"Make tomato butter gravy",
-"Simmer chicken"
-]
-},
-{
-"name": "Chicken Tikka",
-"veg": false,
-"ingredients": [
-"chicken",
-"curd",
-"ginger",
-"garlic",
-"lemon"
-],
-"steps": [
-"Marinate chicken",
-"Skewer",
-"Grill or pan sear"
-]
-},
-{
-"name": "Chicken Fry",
-"veg": false,
-"ingredients": [
-"chicken",
-"ginger",
-"garlic",
-"lemon",
-"chilli"
-],
-"steps": [
-"Marinate",
-"Shallow fry",
-"Crisp"
-]
-},
-{
-"name": "Kadai Chicken",
-"veg": false,
-"ingredients": [
-"chicken",
-"capsicum",
-"onion",
-"tomato",
-"coriander seeds"
-],
-"steps": [
-"Fry onion, capsicum",
-"Add tomato, chicken",
-"Simmer"
-]
-},
-{
-"name": "Chicken Korma",
-"veg": false,
-"ingredients": [
-"chicken",
-"curd",
-"onion",
-"cashew",
-"ginger",
-"garlic"
-],
-"steps": [
-"Fry onion, blend with cashew",
-"Cook chicken with curd",
-"Combine"
-]
-},
-{
-"name": "Chicken Do Pyaza",
-"veg": false,
-"ingredients": [
-"chicken",
-"onion",
-"tomato",
-"ginger",
-"garlic"
-],
-"steps": [
-"Fry onions twice",
-"Add chicken, tomato",
-"Simmer"
-]
-},
-{
-"name": "Mutton Curry",
-"veg": false,
-"ingredients": [
-"mutton",
-"onion",
-"tomato",
-"ginger",
-"garlic",
-"turmeric"
-],
-"steps": [
-"Fry onion, ginger, garlic",
-"Brown mutton",
-"Pressure cook"
-]
-},
-{
-"name": "Keema Matar",
-"veg": false,
-"ingredients": [
-"mutton",
-"peas",
-"onion",
-"tomato",
-"ginger",
-"garlic"
-],
-"steps": [
-"Brown keema with onion",
-"Add tomato, peas",
-"Cook dry"
-]
-},
-{
-"name": "Fish Curry",
-"veg": false,
-"ingredients": [
-"fish",
-"onion",
-"tomato",
-"tamarind",
-"turmeric",
-"mustard seeds"
-],
-"steps": [
-"Make tamarind gravy",
-"Add fish",
-"Simmer gently"
-]
-},
-{
-"name": "Fish Fry",
-"veg": false,
-"ingredients": [
-"fish",
-"gram flour",
-"lemon",
-"turmeric",
-"chilli"
-],
-"steps": [
-"Marinate fish",
-"Coat lightly",
-"Shallow fry"
-]
-},
-{
-"name": "Prawn Masala",
-"veg": false,
-"ingredients": [
-"prawn",
-"onion",
-"tomato",
-"ginger",
-"garlic",
-"turmeric"
-],
-"steps": [
-"Make masala",
-"Add prawns",
-"Cook 5 min"
-]
-},
-{
-"name": "Mixed Veg",
-"veg": true,
-"ingredients": [
-"potato",
-"carrot",
-"peas",
-"cauliflower",
-"onion",
-"tomato",
-"cumin"
-],
-"steps": [
-"Temper cumin",
-"Saute onion, tomato",
-"Add veg, cook covered"
-]
-},
-{
-"name": "Veg Kurma",
-"veg": true,
-"ingredients": [
-"potato",
-"carrot",
-"peas",
-"coconut",
-"onion",
-"tomato"
-],
-"steps": [
-"Grind coconut paste",
-"Cook veg",
-"Simmer with paste"
-]
-},
-{
-"name": "Navratan Korma",
-"veg": true,
-"ingredients": [
-"potato",
-"carrot",
-"peas",
-"paneer",
-"cream",
-"cashew",
-"onion"
-],
-"steps": [
-"Cook veg",
-"Blend onion-cashew gravy",
-"Combine with cream"
-]
-},
-{
-"name": "Veg Jalfrezi",
-"veg": true,
-"ingredients": [
-"capsicum",
-"carrot",
-"onion",
-"tomato",
-"paneer"
-],
-"steps": [
-"Stir fry veg",
-"Add tomato sauce masala",
-"Toss"
-]
-},
-{
-"name": "Veg Kolhapuri",
-"veg": true,
-"ingredients": [
-"potato",
-"carrot",
-"peas",
-"onion",
-"tomato",
-"coconut"
-],
-"steps": [
-"Make spicy coconut masala",
-"Add veg",
-"Simmer"
-]
-},
-{
-"name": "Capsicum Aloo",
-"veg": true,
-"ingredients": [
-"capsicum",
-"potato",
-"onion",
-"cumin"
-],
-"steps": [
-"Temper cumin",
-"Add potato, capsicum",
-"Cook dry"
-]
-},
-{
-"name": "Shimla Mirch Besan",
-"veg": true,
-"ingredients": [
-"capsicum",
-"gram flour",
-"onion",
-"cumin"
-],
-"steps": [
-"Temper cumin",
-"Saute capsicum, onion",
-"Add besan, roast"
-]
-},
-{
-"name": "Cabbage Sabzi",
-"veg": true,
-"ingredients": [
-"cabbage",
-"potato",
-"peas",
-"turmeric",
-"mustard seeds"
-],
-"steps": [
-"Temper mustard seeds",
-"Add cabbage, potato",
-"Cook dry"
-]
-},
-{
-"name": "Cabbage Poriyal",
-"veg": true,
-"ingredients": [
-"cabbage",
-"coconut",
-"mustard seeds",
-"chilli"
-],
-"steps": [
-"Temper mustard seeds, chilli",
-"Add cabbage",
-"Finish with coconut"
-]
-},
-{
-"name": "Beans Poriyal",
-"veg": true,
-"ingredients": [
-"green beans",
-"coconut",
-"mustard seeds",
-"chilli"
-],
-"steps": [
-"Temper mustard seeds",
-"Add beans",
-"Add coconut"
-]
-},
-{
-"name": "Carrot Beans Sabzi",
-"veg": true,
-"ingredients": [
-"carrot",
-"green beans",
-"turmeric",
-"cumin"
-],
-"steps": [
-"Temper cumin",
-"Add veg, turmeric",
-"Cook dry"
-]
-},
-{
-"name": "Beetroot Sabzi",
-"veg": true,
-"ingredients": [
-"beetroot",
-"coconut",
-"mustard seeds",
-"chilli"
-],
-"steps": [
-"Temper mustard seeds",
-"Add beetroot",
-"Finish coconut"
-]
-},
-{
-"name": "Sarson Ka Saag",
-"veg": true,
-"ingredients": [
-"mustard greens",
-"spinach",
-"maize flour",
-"ginger",
-"garlic"
-],
-"steps": [
-"Cook greens",
-"Mash",
-"Temper ginger, garlic, add makki flour"
-]
-},
-{
-"name": "Makki Roti",
-"veg": true,
-"ingredients": [
-"maize flour"
-],
-"steps": [
-"Knead with warm water",
-"Pat flat",
-"Roast"
-]
-},
-{
-"name": "Methi Malai Matar",
-"veg": true,
-"ingredients": [
-"fenugreek",
-"peas",
-"cream",
-"onion",
-"cashew"
-],
-"steps": [
-"Blend onion-cashew",
-"Cook methi, peas",
-"Add cream"
-]
-},
-{
-"name": "Spinach Corn",
-"veg": true,
-"ingredients": [
-"spinach",
-"corn",
-"garlic",
-"cream"
-],
-"steps": [
-"Blanch spinach",
-"Saute garlic, corn",
-"Add puree"
-]
-},
-{
-"name": "Mushroom Masala",
-"veg": true,
-"ingredients": [
-"mushroom",
-"onion",
-"tomato",
-"ginger",
-"garlic"
-],
-"steps": [
-"Saute mushroom",
-"Make masala",
-"Combine"
-]
-},
-{
-"name": "Mushroom Matar",
-"veg": true,
-"ingredients": [
-"mushroom",
-"peas",
-"onion",
-"tomato"
-],
-"steps": [
-"Make masala",
-"Add mushroom, peas",
-"Simmer"
-]
-},
-{
-"name": "Tomato Chutney",
-"veg": true,
-"ingredients": [
-"tomato",
-"garlic",
-"chilli",
-"mustard seeds"
-],
-"steps": [
-"Cook tomato, chilli, garlic",
-"Blend",
-"Temper"
-]
-},
-{
-"name": "Coconut Chutney",
-"veg": true,
-"ingredients": [
-"coconut",
-"chilli",
-"ginger",
-"mustard seeds"
-],
-"steps": [
-"Grind coconut, chilli, ginger",
-"Temper mustard seeds",
-"Mix"
-]
-},
-{
-"name": "Mint Chutney",
-"veg": true,
-"ingredients": [
-"mint",
-"coriander",
-"chilli",
-"lemon"
-],
-"steps": [
-"Blend greens, chilli",
-"Add lemon",
-"Chill"
-]
-},
-{
-"name": "Raita Boondi",
-"veg": true,
-"ingredients": [
-"curd",
-"boondi",
-"cumin"
-],
-"steps": [
-"Whisk curd",
-"Add boondi, roasted cumin",
-"Chill"
-]
-},
-{
-"name": "Cucumber Raita",
-"veg": true,
-"ingredients": [
-"curd",
-"cucumber",
-"cumin"
-],
-"steps": [
-"Whisk curd",
-"Add grated cucumber",
-"Season roasted cumin"
-]
-},
-{
-"name": "Onion Raita",
-"veg": true,
-"ingredients": [
-"curd",
-"onion",
-"cumin"
-],
-"steps": [
-"Whisk curd",
-"Add onion",
-"Season"
-]
-},
-{
-"name": "Lassi Sweet",
-"veg": true,
-"ingredients": [
-"curd",
-"sugar",
-"cardamom"
-],
-"steps": [
-"Blend curd, sugar",
-"Add cardamom",
-"Chill"
-]
-},
-{
-"name": "Masala Chaas",
-"veg": true,
-"ingredients": [
-"curd",
-"cumin",
-"mint",
-"coriander"
-],
-"steps": [
-"Blend curd, water",
-"Add cumin, mint",
-"Chill"
-]
-},
-{
-"name": "Masala Chai",
-"veg": true,
-"ingredients": [
-"tea",
-"milk",
-"ginger",
-"cardamom",
-"sugar"
-],
-"steps": [
-"Boil water, ginger, cardamom",
-"Add tea, milk",
-"Strain"
-]
-},
-{
-"name": "Suji Halwa",
-"veg": true,
-"ingredients": [
-"semolina",
-"sugar",
-"ghee",
-"cardamom"
-],
-"steps": [
-"Roast suji in ghee",
-"Add sugar syrup",
-"Stir till thick"
-]
-},
-{
-"name": "Kheer",
-"veg": true,
-"ingredients": [
-"rice",
-"milk",
-"sugar",
-"cardamom"
-],
-"steps": [
-"Simmer rice in milk",
-"Add sugar, cardamom",
-"Cook till creamy"
-]
-},
-{
-"name": "Gajar Halwa",
-"veg": true,
-"ingredients": [
-"carrot",
-"milk",
-"sugar",
-"ghee",
-"cardamom"
-],
-"steps": [
-"Grate carrot",
-"Cook in milk",
-"Add sugar, ghee"
-]
-},
-{
-"name": "Besan Ladoo",
-"veg": true,
-"ingredients": [
-"gram flour",
-"ghee",
-"sugar",
-"cardamom"
-],
-"steps": [
-"Roast besan in ghee",
-"Add sugar",
-"Shape ladoos"
-]
-},
-{
-"name": "Sheera",
-"veg": true,
-"ingredients": [
-"semolina",
-"banana",
-"sugar",
-"ghee"
-],
-"steps": [
-"Roast suji",
-"Add mashed banana",
-"Add sugar, water"
-]
-},
-{
-"name": "Banana Pancake",
-"veg": true,
-"ingredients": [
-"banana",
-"wheat flour",
-"milk",
-"sugar"
-],
-"steps": [
-"Mash banana with milk, flour",
-"Pour on tawa",
-"Cook both sides"
-]
-},
-{
-"name": "Vermicelli Upma",
-"veg": true,
-"ingredients": [
-"vermicelli",
-"onion",
-"tomato",
-"mustard seeds"
-],
-"steps": [
-"Roast vermicelli",
-"Temper, add onion, tomato",
-"Add water"
-]
-},
-{
-"name": "Seviyan Kheer",
-"veg": true,
-"ingredients": [
-"vermicelli",
-"milk",
-"sugar",
-"cardamom"
-],
-"steps": [
-"Roast seviyan",
-"Simmer in milk",
-"Add sugar"
-]
-},
-{
-"name": "Dal Khichdi Tadka",
-"veg": true,
-"ingredients": [
-"rice",
-"toor dal",
-"turmeric",
-"cumin",
-"garlic"
-],
-"steps": [
-"Pressure cook rice, dal",
-"Temper garlic, cumin",
-"Pour over"
-]
-},
-{
-"name": "Lemon Dal",
-"veg": true,
-"ingredients": [
-"toor dal",
-"lemon",
-"cumin",
-"turmeric"
-],
-"steps": [
-"Cook dal",
-"Temper cumin",
-"Add lemon"
-]
-},
-{
-"name": "Tomato Dal",
-"veg": true,
-"ingredients": [
-"toor dal",
-"tomato",
-"cumin",
-"turmeric",
-"garlic"
-],
-"steps": [
-"Cook dal with tomato",
-"Temper",
-"Mix"
-]
-},
-{
-"name": "Dal Palak Khichdi",
-"veg": true,
-"ingredients": [
-"rice",
-"moong dal",
-"spinach",
-"cumin"
-],
-"steps": [
-"Pressure cook",
-"Add spinach",
-"Temper"
-]
-},
-{
-"name": "Tomato Soup",
-"veg": true,
-"ingredients": [
-"tomato",
-"onion",
-"garlic",
-"butter"
-],
-"steps": [
-"Cook tomato, onion",
-"Blend",
-"Finish with butter"
-]
-},
-{
-"name": "Veg Soup",
-"veg": true,
-"ingredients": [
-"carrot",
-"cabbage",
-"onion",
-"peas"
-],
-"steps": [
-"Saute veg",
-"Add water, simmer",
-"Season"
-]
-},
-{
-"name": "Mixed Dal Cheela",
-"veg": true,
-"ingredients": [
-"moong dal",
-"masoor dal",
-"chana dal",
-"onion"
-],
-"steps": [
-"Soak, grind dals",
-"Add onion",
-"Cook pancakes"
-]
-},
-{
-"name": "Stuffed Tomato",
-"veg": true,
-"ingredients": [
-"tomato",
-"paneer",
-"onion",
-"coriander"
-],
-"steps": [
-"Hollow tomatoes",
-"Stuff paneer mix",
-"Bake or steam"
-]
-}
+ {
+  "id": "aloo-sabzi",
+  "name": "Aloo Sabzi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "potato",
+   "onion",
+   "tomato",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Temper cumin",
+   "Saute onion, tomato",
+   "Add potato, turmeric, cook covered"
+  ]
+ },
+ {
+  "id": "aloo-jeera",
+  "name": "Aloo Jeera",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "potato",
+   "cumin",
+   "turmeric"
+  ],
+  "steps": [
+   "Boil and cube potato",
+   "Temper cumin",
+   "Toss potato with turmeric"
+  ]
+ },
+ {
+  "id": "aloo-gobi",
+  "name": "Aloo Gobi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "potato",
+   "cauliflower",
+   "onion",
+   "tomato",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Temper cumin",
+   "Saute onion, tomato",
+   "Add aloo, gobi, cook covered"
+  ]
+ },
+ {
+  "id": "aloo-matar",
+  "name": "Aloo Matar",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "potato",
+   "peas",
+   "onion",
+   "tomato",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Temper cumin",
+   "Make onion-tomato masala",
+   "Add potato, peas, simmer"
+  ]
+ },
+ {
+  "id": "aloo-paratha",
+  "name": "Aloo Paratha",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 25,
+  "difficulty": "medium",
+  "tags": [
+   "roti",
+   "tiffin"
+  ],
+  "ingredients": [
+   "potato",
+   "wheat flour",
+   "onion",
+   "chilli"
+  ],
+  "steps": [
+   "Mash potato with onion, chilli",
+   "Stuff into dough",
+   "Roll and roast with ghee"
+  ]
+ },
+ {
+  "id": "aloo-tikki",
+  "name": "Aloo Tikki",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "potato",
+   "bread",
+   "peas"
+  ],
+  "steps": [
+   "Mash potato, peas",
+   "Shape patties",
+   "Shallow fry"
+  ]
+ },
+ {
+  "id": "aloo-baingan",
+  "name": "Aloo Baingan",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "potato",
+   "brinjal",
+   "onion",
+   "tomato",
+   "turmeric"
+  ],
+  "steps": [
+   "Fry onion, tomato",
+   "Add brinjal, potato",
+   "Cook covered"
+  ]
+ },
+ {
+  "id": "aloo-palak",
+  "name": "Aloo Palak",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "potato",
+   "spinach",
+   "onion",
+   "garlic",
+   "cumin"
+  ],
+  "steps": [
+   "Temper cumin, garlic",
+   "Add onion, potato",
+   "Add spinach, cook down"
+  ]
+ },
+ {
+  "id": "aloo-methi",
+  "name": "Aloo Methi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "potato",
+   "fenugreek",
+   "onion",
+   "cumin"
+  ],
+  "steps": [
+   "Temper cumin",
+   "Add potato, onion",
+   "Add methi, cook dry"
+  ]
+ },
+ {
+  "id": "aloo-pyaaz",
+  "name": "Aloo Pyaaz",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "potato",
+   "onion",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Temper cumin",
+   "Fry onion",
+   "Add potato, turmeric, cook covered"
+  ]
+ },
+ {
+  "id": "dum-aloo",
+  "name": "Dum Aloo",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "hard",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "potato",
+   "curd",
+   "onion",
+   "tomato",
+   "ginger",
+   "garlic"
+  ],
+  "steps": [
+   "Fry boiled potato",
+   "Cook masala with curd",
+   "Simmer potato in gravy"
+  ]
+ },
+ {
+  "id": "jeera-aloo-fry",
+  "name": "Jeera Aloo Fry",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi",
+   "dry"
+  ],
+  "ingredients": [
+   "potato",
+   "cumin",
+   "coriander"
+  ],
+  "steps": [
+   "Fry potato cubes",
+   "Add cumin",
+   "Finish with coriander"
+  ]
+ },
+ {
+  "id": "gobi-sabzi",
+  "name": "Gobi Sabzi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "cauliflower",
+   "potato",
+   "tomato",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Temper cumin",
+   "Add tomato, spices",
+   "Add gobi, potato, cook covered"
+  ]
+ },
+ {
+  "id": "gobi-manchurian-dry",
+  "name": "Gobi Manchurian Dry",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi",
+   "dry"
+  ],
+  "ingredients": [
+   "cauliflower",
+   "gram flour",
+   "capsicum",
+   "garlic",
+   "soy sauce"
+  ],
+  "steps": [
+   "Batter and fry gobi",
+   "Saute garlic, capsicum",
+   "Toss with soy sauce"
+  ]
+ },
+ {
+  "id": "gobi-paratha",
+  "name": "Gobi Paratha",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 25,
+  "difficulty": "medium",
+  "tags": [
+   "roti",
+   "tiffin"
+  ],
+  "ingredients": [
+   "cauliflower",
+   "wheat flour",
+   "chilli",
+   "coriander"
+  ],
+  "steps": [
+   "Grate and squeeze gobi",
+   "Stuff dough",
+   "Roast with ghee"
+  ]
+ },
+ {
+  "id": "bhindi-fry",
+  "name": "Bhindi Fry",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi",
+   "dry"
+  ],
+  "ingredients": [
+   "okra",
+   "onion",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Dry and chop okra",
+   "Fry with cumin, onion",
+   "Add turmeric, cook till crisp"
+  ]
+ },
+ {
+  "id": "bhindi-masala",
+  "name": "Bhindi Masala",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi",
+   "gravy"
+  ],
+  "ingredients": [
+   "okra",
+   "onion",
+   "tomato",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Fry okra",
+   "Make onion-tomato masala",
+   "Mix and cook"
+  ]
+ },
+ {
+  "id": "baingan-bharta",
+  "name": "Baingan Bharta",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "brinjal",
+   "onion",
+   "tomato",
+   "garlic",
+   "chilli"
+  ],
+  "steps": [
+   "Roast brinjal, peel, mash",
+   "Saute onion, garlic, tomato",
+   "Mix in brinjal"
+  ]
+ },
+ {
+  "id": "bharwa-baingan",
+  "name": "Bharwa Baingan",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "brinjal",
+   "gram flour",
+   "peanuts",
+   "coriander"
+  ],
+  "steps": [
+   "Make stuffing of besan, peanut",
+   "Stuff brinjal",
+   "Cook covered"
+  ]
+ },
+ {
+  "id": "lauki-sabzi",
+  "name": "Lauki Sabzi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "bottle gourd",
+   "tomato",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Temper cumin",
+   "Add tomato, lauki",
+   "Cook till soft"
+  ]
+ },
+ {
+  "id": "lauki-chana-dal",
+  "name": "Lauki Chana Dal",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "bottle gourd",
+   "chana dal",
+   "tomato",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Pressure cook dal with lauki",
+   "Temper cumin",
+   "Mix"
+  ]
+ },
+ {
+  "id": "turai-sabzi",
+  "name": "Turai Sabzi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "ridge gourd",
+   "onion",
+   "tomato",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Temper cumin",
+   "Add onion, tomato",
+   "Add turai, cook covered"
+  ]
+ },
+ {
+  "id": "karela-fry",
+  "name": "Karela Fry",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi",
+   "dry"
+  ],
+  "ingredients": [
+   "bitter gourd",
+   "onion",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Salt and squeeze karela",
+   "Fry with onion",
+   "Season and crisp"
+  ]
+ },
+ {
+  "id": "tinda-masala",
+  "name": "Tinda Masala",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi",
+   "gravy"
+  ],
+  "ingredients": [
+   "tinda",
+   "onion",
+   "tomato",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Temper cumin",
+   "Masala of onion, tomato",
+   "Add tinda, simmer"
+  ]
+ },
+ {
+  "id": "kaddu-sabzi",
+  "name": "Kaddu Sabzi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "pumpkin",
+   "fenugreek seeds",
+   "turmeric",
+   "chilli"
+  ],
+  "steps": [
+   "Temper methi seeds",
+   "Add pumpkin, turmeric",
+   "Cook till soft"
+  ]
+ },
+ {
+  "id": "arbi-fry",
+  "name": "Arbi Fry",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi",
+   "dry"
+  ],
+  "ingredients": [
+   "colocasia",
+   "carom seeds",
+   "turmeric",
+   "chilli"
+  ],
+  "steps": [
+   "Boil, peel, slice arbi",
+   "Temper ajwain",
+   "Fry till crisp"
+  ]
+ },
+ {
+  "id": "mooli-paratha",
+  "name": "Mooli Paratha",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 25,
+  "difficulty": "medium",
+  "tags": [
+   "roti",
+   "tiffin"
+  ],
+  "ingredients": [
+   "radish",
+   "wheat flour",
+   "chilli",
+   "coriander"
+  ],
+  "steps": [
+   "Grate and squeeze mooli",
+   "Stuff dough",
+   "Roast with ghee"
+  ]
+ },
+ {
+  "id": "matar-paneer",
+  "name": "Matar Paneer",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "peas",
+   "paneer",
+   "onion",
+   "tomato",
+   "ginger",
+   "garlic"
+  ],
+  "steps": [
+   "Make onion-tomato masala",
+   "Add peas",
+   "Add paneer, simmer"
+  ]
+ },
+ {
+  "id": "palak-paneer",
+  "name": "Palak Paneer",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "spinach",
+   "paneer",
+   "onion",
+   "tomato",
+   "garlic",
+   "ginger"
+  ],
+  "steps": [
+   "Blanch and puree spinach",
+   "Saute onion, tomato, ginger, garlic",
+   "Add puree and paneer"
+  ]
+ },
+ {
+  "id": "paneer-butter-masala",
+  "name": "Paneer Butter Masala",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi",
+   "gravy"
+  ],
+  "ingredients": [
+   "paneer",
+   "tomato",
+   "butter",
+   "cream",
+   "onion"
+  ],
+  "steps": [
+   "Cook tomato, onion, blend",
+   "Add butter, cream",
+   "Add paneer"
+  ]
+ },
+ {
+  "id": "kadai-paneer",
+  "name": "Kadai Paneer",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "paneer",
+   "capsicum",
+   "onion",
+   "tomato",
+   "coriander seeds"
+  ],
+  "steps": [
+   "Fry capsicum, onion",
+   "Add tomato, ground coriander",
+   "Add paneer"
+  ]
+ },
+ {
+  "id": "paneer-bhurji",
+  "name": "Paneer Bhurji",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "sabzi",
+   "quick",
+   "dry"
+  ],
+  "ingredients": [
+   "paneer",
+   "onion",
+   "tomato",
+   "turmeric",
+   "chilli"
+  ],
+  "steps": [
+   "Saute onion, tomato, chilli",
+   "Add turmeric",
+   "Crumble paneer, cook"
+  ]
+ },
+ {
+  "id": "shahi-paneer",
+  "name": "Shahi Paneer",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "paneer",
+   "cream",
+   "onion",
+   "cashew",
+   "tomato"
+  ],
+  "steps": [
+   "Blend onion, cashew, tomato",
+   "Simmer with cream",
+   "Add paneer"
+  ]
+ },
+ {
+  "id": "paneer-tikka",
+  "name": "Paneer Tikka",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "paneer",
+   "curd",
+   "capsicum",
+   "onion",
+   "chilli"
+  ],
+  "steps": [
+   "Marinate paneer in curd",
+   "Skewer with veg",
+   "Grill or pan sear"
+  ]
+ },
+ {
+  "id": "palak-dal",
+  "name": "Palak Dal",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "toor dal",
+   "spinach",
+   "garlic",
+   "cumin",
+   "turmeric"
+  ],
+  "steps": [
+   "Pressure cook dal with turmeric",
+   "Wilt spinach",
+   "Temper cumin, garlic, mix"
+  ]
+ },
+ {
+  "id": "dal-tadka",
+  "name": "Dal Tadka",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "toor dal",
+   "onion",
+   "tomato",
+   "garlic",
+   "cumin",
+   "turmeric"
+  ],
+  "steps": [
+   "Pressure cook dal with turmeric",
+   "Temper cumin, garlic, onion, tomato",
+   "Mix and simmer"
+  ]
+ },
+ {
+  "id": "dal-fry",
+  "name": "Dal Fry",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal",
+   "dry"
+  ],
+  "ingredients": [
+   "toor dal",
+   "onion",
+   "tomato",
+   "garlic",
+   "cumin",
+   "turmeric"
+  ],
+  "steps": [
+   "Cook dal soft",
+   "Fry onion, tomato, garlic",
+   "Combine and boil"
+  ]
+ },
+ {
+  "id": "moong-dal",
+  "name": "Moong Dal",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "moong dal",
+   "turmeric",
+   "cumin",
+   "ginger"
+  ],
+  "steps": [
+   "Cook dal with turmeric",
+   "Temper cumin, ginger",
+   "Pour over"
+  ]
+ },
+ {
+  "id": "masoor-dal",
+  "name": "Masoor Dal",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "masoor dal",
+   "onion",
+   "tomato",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Cook dal with turmeric",
+   "Temper cumin, onion, tomato",
+   "Mix"
+  ]
+ },
+ {
+  "id": "chana-dal",
+  "name": "Chana Dal",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "chana dal",
+   "onion",
+   "tomato",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Soak and pressure cook dal",
+   "Temper masala",
+   "Mix and simmer"
+  ]
+ },
+ {
+  "id": "urad-dal",
+  "name": "Urad Dal",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "urad dal",
+   "onion",
+   "tomato",
+   "ginger",
+   "garlic"
+  ],
+  "steps": [
+   "Cook dal",
+   "Fry onion, ginger, garlic, tomato",
+   "Combine"
+  ]
+ },
+ {
+  "id": "dal-makhani",
+  "name": "Dal Makhani",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 60,
+  "difficulty": "hard",
+  "tags": [
+   "dal",
+   "gravy"
+  ],
+  "ingredients": [
+   "urad dal",
+   "kidney beans",
+   "butter",
+   "tomato",
+   "cream",
+   "ginger",
+   "garlic"
+  ],
+  "steps": [
+   "Cook dal, rajma long",
+   "Make tomato masala with butter",
+   "Simmer together, add cream"
+  ]
+ },
+ {
+  "id": "sambar",
+  "name": "Sambar",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "toor dal",
+   "tomato",
+   "tamarind",
+   "drumstick",
+   "mustard seeds",
+   "onion"
+  ],
+  "steps": [
+   "Cook dal",
+   "Boil veg with tamarind",
+   "Mix, temper mustard seeds"
+  ]
+ },
+ {
+  "id": "rasam",
+  "name": "Rasam",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "tomato",
+   "tamarind",
+   "toor dal",
+   "mustard seeds",
+   "garlic"
+  ],
+  "steps": [
+   "Boil tomato, tamarind, spices",
+   "Add dal water",
+   "Temper mustard seeds"
+  ]
+ },
+ {
+  "id": "rajma",
+  "name": "Rajma",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 60,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "kidney beans",
+   "onion",
+   "tomato",
+   "ginger",
+   "garlic"
+  ],
+  "steps": [
+   "Soak, pressure cook rajma",
+   "Cook onion, tomato masala",
+   "Simmer rajma in masala"
+  ]
+ },
+ {
+  "id": "chole",
+  "name": "Chole",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 60,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "chickpeas",
+   "onion",
+   "tomato",
+   "ginger",
+   "garlic",
+   "tea"
+  ],
+  "steps": [
+   "Soak, boil chickpeas with tea",
+   "Make onion-tomato masala",
+   "Simmer together"
+  ]
+ },
+ {
+  "id": "chana-masala",
+  "name": "Chana Masala",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal",
+   "gravy"
+  ],
+  "ingredients": [
+   "chickpeas",
+   "onion",
+   "tomato",
+   "ginger",
+   "garlic"
+  ],
+  "steps": [
+   "Boil chickpeas",
+   "Make masala",
+   "Simmer together"
+  ]
+ },
+ {
+  "id": "lobia-masala",
+  "name": "Lobia Masala",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal",
+   "gravy"
+  ],
+  "ingredients": [
+   "black eyed peas",
+   "onion",
+   "tomato",
+   "turmeric"
+  ],
+  "steps": [
+   "Soak and cook lobia",
+   "Make masala",
+   "Combine"
+  ]
+ },
+ {
+  "id": "kala-chana",
+  "name": "Kala Chana",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "black chickpeas",
+   "onion",
+   "tomato",
+   "turmeric"
+  ],
+  "steps": [
+   "Soak and pressure cook chana",
+   "Temper masala",
+   "Mix"
+  ]
+ },
+ {
+  "id": "moong-sprouts-sabzi",
+  "name": "Moong Sprouts Sabzi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "sprouted moong",
+   "onion",
+   "tomato",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Temper cumin",
+   "Saute onion, tomato",
+   "Add sprouts, cook"
+  ]
+ },
+ {
+  "id": "kadhi-pakora",
+  "name": "Kadhi Pakora",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal",
+   "gravy"
+  ],
+  "ingredients": [
+   "curd",
+   "gram flour",
+   "onion",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Whisk curd, besan, turmeric",
+   "Boil till thick",
+   "Add fried pakoras, temper"
+  ]
+ },
+ {
+  "id": "gujarati-kadhi",
+  "name": "Gujarati Kadhi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal",
+   "gravy"
+  ],
+  "ingredients": [
+   "curd",
+   "gram flour",
+   "mustard seeds",
+   "ginger",
+   "sugar"
+  ],
+  "steps": [
+   "Whisk curd, besan",
+   "Cook with ginger",
+   "Temper mustard seeds"
+  ]
+ },
+ {
+  "id": "jeera-rice",
+  "name": "Jeera Rice",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "rice"
+  ],
+  "ingredients": [
+   "rice",
+   "cumin"
+  ],
+  "steps": [
+   "Temper cumin in ghee",
+   "Add washed rice and water",
+   "Cook until fluffy"
+  ]
+ },
+ {
+  "id": "plain-rice",
+  "name": "Plain Rice",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "rice",
+   "quick"
+  ],
+  "ingredients": [
+   "rice"
+  ],
+  "steps": [
+   "Wash rice",
+   "Cook with water",
+   "Fluff"
+  ]
+ },
+ {
+  "id": "khichdi",
+  "name": "Khichdi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "rice",
+   "tiffin"
+  ],
+  "ingredients": [
+   "rice",
+   "moong dal",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Rinse rice and dal",
+   "Pressure cook with turmeric",
+   "Temper cumin"
+  ]
+ },
+ {
+  "id": "masala-khichdi",
+  "name": "Masala Khichdi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "rice",
+   "gravy",
+   "tiffin"
+  ],
+  "ingredients": [
+   "rice",
+   "moong dal",
+   "onion",
+   "tomato",
+   "peas",
+   "cumin"
+  ],
+  "steps": [
+   "Saute onion, tomato",
+   "Add rice, dal, peas",
+   "Pressure cook"
+  ]
+ },
+ {
+  "id": "vegetable-pulao",
+  "name": "Vegetable Pulao",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "rice",
+   "tiffin"
+  ],
+  "ingredients": [
+   "rice",
+   "peas",
+   "carrot",
+   "onion",
+   "cumin"
+  ],
+  "steps": [
+   "Fry cumin, onion",
+   "Add veg, rice, water",
+   "Cook covered"
+  ]
+ },
+ {
+  "id": "matar-pulao",
+  "name": "Matar Pulao",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "rice",
+   "tiffin"
+  ],
+  "ingredients": [
+   "rice",
+   "peas",
+   "cumin",
+   "onion"
+  ],
+  "steps": [
+   "Fry cumin, onion",
+   "Add peas, rice",
+   "Cook covered"
+  ]
+ },
+ {
+  "id": "tomato-rice",
+  "name": "Tomato Rice",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "rice"
+  ],
+  "ingredients": [
+   "rice",
+   "tomato",
+   "onion",
+   "mustard seeds"
+  ],
+  "steps": [
+   "Temper mustard seeds",
+   "Cook onion, tomato",
+   "Mix with rice"
+  ]
+ },
+ {
+  "id": "lemon-rice",
+  "name": "Lemon Rice",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "rice"
+  ],
+  "ingredients": [
+   "rice",
+   "lemon",
+   "peanuts",
+   "mustard seeds",
+   "turmeric"
+  ],
+  "steps": [
+   "Temper mustard seeds, peanuts",
+   "Add turmeric, rice",
+   "Squeeze lemon"
+  ]
+ },
+ {
+  "id": "curd-rice",
+  "name": "Curd Rice",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "rice"
+  ],
+  "ingredients": [
+   "rice",
+   "curd",
+   "mustard seeds",
+   "chilli"
+  ],
+  "steps": [
+   "Mash cooked rice with curd",
+   "Temper mustard seeds, chilli",
+   "Mix"
+  ]
+ },
+ {
+  "id": "coconut-rice",
+  "name": "Coconut Rice",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "rice"
+  ],
+  "ingredients": [
+   "rice",
+   "coconut",
+   "mustard seeds",
+   "chilli"
+  ],
+  "steps": [
+   "Temper mustard seeds, chilli",
+   "Add coconut",
+   "Mix with rice"
+  ]
+ },
+ {
+  "id": "veg-biryani",
+  "name": "Veg Biryani",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 60,
+  "difficulty": "hard",
+  "tags": [
+   "rice"
+  ],
+  "ingredients": [
+   "rice",
+   "potato",
+   "carrot",
+   "peas",
+   "onion",
+   "curd",
+   "mint"
+  ],
+  "steps": [
+   "Marinate veg in curd",
+   "Layer with par-cooked rice",
+   "Dum cook"
+  ]
+ },
+ {
+  "id": "egg-fried-rice",
+  "name": "Egg Fried Rice",
+  "veg": false,
+  "diet": "egg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "rice"
+  ],
+  "ingredients": [
+   "rice",
+   "egg",
+   "onion",
+   "carrot",
+   "soy sauce"
+  ],
+  "steps": [
+   "Scramble egg",
+   "Stir fry veg",
+   "Add rice, soy sauce"
+  ]
+ },
+ {
+  "id": "egg-biryani",
+  "name": "Egg Biryani",
+  "veg": false,
+  "diet": "egg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 60,
+  "difficulty": "hard",
+  "tags": [
+   "rice"
+  ],
+  "ingredients": [
+   "rice",
+   "egg",
+   "onion",
+   "curd",
+   "mint"
+  ],
+  "steps": [
+   "Boil eggs",
+   "Layer with masala and rice",
+   "Dum cook"
+  ]
+ },
+ {
+  "id": "chicken-biryani",
+  "name": "Chicken Biryani",
+  "veg": false,
+  "diet": "nonveg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 60,
+  "difficulty": "hard",
+  "tags": [
+   "rice"
+  ],
+  "ingredients": [
+   "rice",
+   "chicken",
+   "onion",
+   "curd",
+   "mint",
+   "ginger",
+   "garlic"
+  ],
+  "steps": [
+   "Marinate chicken in curd",
+   "Layer with par-cooked rice",
+   "Dum cook"
+  ]
+ },
+ {
+  "id": "roti",
+  "name": "Roti",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "roti",
+   "quick",
+   "tiffin"
+  ],
+  "ingredients": [
+   "wheat flour"
+  ],
+  "steps": [
+   "Knead dough with water",
+   "Roll rounds",
+   "Roast on tawa"
+  ]
+ },
+ {
+  "id": "phulka",
+  "name": "Phulka",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "roti",
+   "quick"
+  ],
+  "ingredients": [
+   "wheat flour"
+  ],
+  "steps": [
+   "Knead soft dough",
+   "Roll thin",
+   "Puff on flame"
+  ]
+ },
+ {
+  "id": "paratha",
+  "name": "Paratha",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 25,
+  "difficulty": "medium",
+  "tags": [
+   "roti",
+   "tiffin"
+  ],
+  "ingredients": [
+   "wheat flour"
+  ],
+  "steps": [
+   "Knead dough",
+   "Roll, fold with ghee",
+   "Roast till golden"
+  ]
+ },
+ {
+  "id": "methi-thepla",
+  "name": "Methi Thepla",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 25,
+  "difficulty": "medium",
+  "tags": [
+   "roti",
+   "tiffin"
+  ],
+  "ingredients": [
+   "wheat flour",
+   "fenugreek",
+   "curd",
+   "turmeric"
+  ],
+  "steps": [
+   "Knead flour, methi, curd",
+   "Roll thin",
+   "Roast with oil"
+  ]
+ },
+ {
+  "id": "missi-roti",
+  "name": "Missi Roti",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "roti",
+   "quick",
+   "tiffin"
+  ],
+  "ingredients": [
+   "wheat flour",
+   "gram flour",
+   "onion",
+   "cumin"
+  ],
+  "steps": [
+   "Mix flours, onion, cumin",
+   "Knead",
+   "Roast"
+  ]
+ },
+ {
+  "id": "besan-chilla",
+  "name": "Besan Chilla",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "gram flour",
+   "onion",
+   "tomato",
+   "chilli",
+   "coriander"
+  ],
+  "steps": [
+   "Make batter",
+   "Add onion, tomato, chilli",
+   "Cook thin pancakes"
+  ]
+ },
+ {
+  "id": "puri",
+  "name": "Puri",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 25,
+  "difficulty": "medium",
+  "tags": [
+   "roti"
+  ],
+  "ingredients": [
+   "wheat flour"
+  ],
+  "steps": [
+   "Knead stiff dough",
+   "Roll small rounds",
+   "Deep fry"
+  ]
+ },
+ {
+  "id": "poori-bhaji",
+  "name": "Poori Bhaji",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 25,
+  "difficulty": "medium",
+  "tags": [
+   "roti"
+  ],
+  "ingredients": [
+   "wheat flour",
+   "potato",
+   "onion",
+   "tomato"
+  ],
+  "steps": [
+   "Fry puri",
+   "Cook aloo bhaji",
+   "Serve together"
+  ]
+ },
+ {
+  "id": "bhatura",
+  "name": "Bhatura",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 25,
+  "difficulty": "hard",
+  "tags": [
+   "roti"
+  ],
+  "ingredients": [
+   "refined flour",
+   "curd",
+   "baking soda"
+  ],
+  "steps": [
+   "Knead dough with curd",
+   "Rest",
+   "Roll and deep fry"
+  ]
+ },
+ {
+  "id": "naan-tawa",
+  "name": "Naan Tawa",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 25,
+  "difficulty": "hard",
+  "tags": [
+   "roti"
+  ],
+  "ingredients": [
+   "refined flour",
+   "curd",
+   "baking soda"
+  ],
+  "steps": [
+   "Knead with curd",
+   "Rest",
+   "Roll and cook on tawa"
+  ]
+ },
+ {
+  "id": "poha",
+  "name": "Poha",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick",
+   "tiffin"
+  ],
+  "ingredients": [
+   "flattened rice",
+   "onion",
+   "peanuts",
+   "turmeric",
+   "mustard seeds",
+   "lemon"
+  ],
+  "steps": [
+   "Rinse poha",
+   "Temper mustard seeds, peanuts, onion",
+   "Add turmeric, poha, lemon"
+  ]
+ },
+ {
+  "id": "upma",
+  "name": "Upma",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick",
+   "tiffin"
+  ],
+  "ingredients": [
+   "semolina",
+   "onion",
+   "mustard seeds",
+   "chilli",
+   "curry leaves"
+  ],
+  "steps": [
+   "Roast semolina",
+   "Temper mustard seeds, onion",
+   "Add water, semolina"
+  ]
+ },
+ {
+  "id": "vegetable-upma",
+  "name": "Vegetable Upma",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick",
+   "tiffin"
+  ],
+  "ingredients": [
+   "semolina",
+   "onion",
+   "carrot",
+   "peas",
+   "mustard seeds"
+  ],
+  "steps": [
+   "Roast semolina",
+   "Temper, add veg",
+   "Add water, cook"
+  ]
+ },
+ {
+  "id": "idli",
+  "name": "Idli",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 40,
+  "difficulty": "hard",
+  "tags": [
+   "snack"
+  ],
+  "ingredients": [
+   "rice",
+   "urad dal"
+  ],
+  "steps": [
+   "Soak, grind rice and dal",
+   "Ferment overnight",
+   "Steam"
+  ]
+ },
+ {
+  "id": "dosa",
+  "name": "Dosa",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 40,
+  "difficulty": "medium",
+  "tags": [
+   "snack"
+  ],
+  "ingredients": [
+   "rice",
+   "urad dal"
+  ],
+  "steps": [
+   "Soak, grind, ferment",
+   "Spread on tawa",
+   "Cook crisp"
+  ]
+ },
+ {
+  "id": "rava-dosa",
+  "name": "Rava Dosa",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 40,
+  "difficulty": "medium",
+  "tags": [
+   "snack"
+  ],
+  "ingredients": [
+   "semolina",
+   "rice flour",
+   "curd",
+   "onion"
+  ],
+  "steps": [
+   "Mix batter",
+   "Pour thin on tawa",
+   "Cook crisp"
+  ]
+ },
+ {
+  "id": "masala-dosa",
+  "name": "Masala Dosa",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 40,
+  "difficulty": "medium",
+  "tags": [
+   "snack",
+   "gravy"
+  ],
+  "ingredients": [
+   "rice",
+   "urad dal",
+   "potato",
+   "onion",
+   "mustard seeds"
+  ],
+  "steps": [
+   "Make dosa",
+   "Prepare potato filling",
+   "Fill and fold"
+  ]
+ },
+ {
+  "id": "uttapam",
+  "name": "Uttapam",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "rice",
+   "urad dal",
+   "onion",
+   "tomato",
+   "chilli"
+  ],
+  "steps": [
+   "Ferment batter",
+   "Pour thick, top veg",
+   "Cook both sides"
+  ]
+ },
+ {
+  "id": "medu-vada",
+  "name": "Medu Vada",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 40,
+  "difficulty": "hard",
+  "tags": [
+   "snack"
+  ],
+  "ingredients": [
+   "urad dal",
+   "chilli",
+   "ginger",
+   "curry leaves"
+  ],
+  "steps": [
+   "Grind soaked dal",
+   "Shape rings",
+   "Deep fry"
+  ]
+ },
+ {
+  "id": "sabudana-khichdi",
+  "name": "Sabudana Khichdi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "rice",
+   "tiffin"
+  ],
+  "ingredients": [
+   "sabudana",
+   "potato",
+   "peanuts",
+   "cumin",
+   "chilli"
+  ],
+  "steps": [
+   "Soak sabudana",
+   "Temper cumin, potato",
+   "Add sabudana, peanuts"
+  ]
+ },
+ {
+  "id": "moong-dal-chilla",
+  "name": "Moong Dal Chilla",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "moong dal",
+   "onion",
+   "ginger",
+   "chilli"
+  ],
+  "steps": [
+   "Soak, grind dal",
+   "Add onion, ginger",
+   "Cook pancakes"
+  ]
+ },
+ {
+  "id": "oats-upma",
+  "name": "Oats Upma",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick",
+   "tiffin"
+  ],
+  "ingredients": [
+   "oats",
+   "onion",
+   "carrot",
+   "mustard seeds"
+  ],
+  "steps": [
+   "Roast oats",
+   "Temper veg",
+   "Add water, oats"
+  ]
+ },
+ {
+  "id": "dhokla",
+  "name": "Dhokla",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 40,
+  "difficulty": "medium",
+  "tags": [
+   "snack"
+  ],
+  "ingredients": [
+   "gram flour",
+   "curd",
+   "lemon",
+   "mustard seeds"
+  ],
+  "steps": [
+   "Make batter with besan, curd",
+   "Steam",
+   "Temper mustard seeds"
+  ]
+ },
+ {
+  "id": "khaman",
+  "name": "Khaman",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "gram flour",
+   "lemon",
+   "mustard seeds",
+   "sugar"
+  ],
+  "steps": [
+   "Make batter",
+   "Steam",
+   "Pour tempering"
+  ]
+ },
+ {
+  "id": "handvo",
+  "name": "Handvo",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 40,
+  "difficulty": "hard",
+  "tags": [
+   "snack"
+  ],
+  "ingredients": [
+   "rice",
+   "toor dal",
+   "bottle gourd",
+   "mustard seeds"
+  ],
+  "steps": [
+   "Ferment batter with lauki",
+   "Temper",
+   "Bake or pan cook"
+  ]
+ },
+ {
+  "id": "thalipeeth",
+  "name": "Thalipeeth",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 25,
+  "difficulty": "medium",
+  "tags": [
+   "roti"
+  ],
+  "ingredients": [
+   "wheat flour",
+   "gram flour",
+   "onion",
+   "coriander"
+  ],
+  "steps": [
+   "Mix flours, onion",
+   "Pat thin on pan",
+   "Cook with oil"
+  ]
+ },
+ {
+  "id": "pav-bhaji",
+  "name": "Pav Bhaji",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "potato",
+   "peas",
+   "tomato",
+   "onion",
+   "capsicum",
+   "butter",
+   "bread"
+  ],
+  "steps": [
+   "Boil and mash veg",
+   "Cook with butter masala",
+   "Serve with pav"
+  ]
+ },
+ {
+  "id": "misal-pav",
+  "name": "Misal Pav",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "moth beans",
+   "onion",
+   "tomato",
+   "bread",
+   "coconut"
+  ],
+  "steps": [
+   "Sprout, cook moth beans",
+   "Make spicy curry",
+   "Top with farsan"
+  ]
+ },
+ {
+  "id": "sev-tamatar",
+  "name": "Sev Tamatar",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "tomato",
+   "gram flour",
+   "onion",
+   "cumin"
+  ],
+  "steps": [
+   "Cook tomato gravy",
+   "Add sev",
+   "Serve"
+  ]
+ },
+ {
+  "id": "bread-pakora",
+  "name": "Bread Pakora",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "bread",
+   "gram flour",
+   "potato",
+   "chilli"
+  ],
+  "steps": [
+   "Stuff bread with potato",
+   "Dip in batter",
+   "Deep fry"
+  ]
+ },
+ {
+  "id": "bread-upma",
+  "name": "Bread Upma",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick",
+   "tiffin"
+  ],
+  "ingredients": [
+   "bread",
+   "onion",
+   "tomato",
+   "mustard seeds"
+  ],
+  "steps": [
+   "Cube bread",
+   "Temper, add onion, tomato",
+   "Toss bread"
+  ]
+ },
+ {
+  "id": "bread-omelette",
+  "name": "Bread Omelette",
+  "veg": false,
+  "diet": "egg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "bread",
+   "egg",
+   "onion",
+   "chilli"
+  ],
+  "steps": [
+   "Beat egg with onion, chilli",
+   "Cook omelette",
+   "Sandwich in bread"
+  ]
+ },
+ {
+  "id": "pakora",
+  "name": "Pakora",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "gram flour",
+   "onion",
+   "chilli",
+   "coriander"
+  ],
+  "steps": [
+   "Mix batter with onion",
+   "Drop spoonfuls",
+   "Deep fry"
+  ]
+ },
+ {
+  "id": "onion-bhaji",
+  "name": "Onion Bhaji",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "onion",
+   "gram flour",
+   "chilli",
+   "coriander"
+  ],
+  "steps": [
+   "Slice onion",
+   "Coat in batter",
+   "Deep fry"
+  ]
+ },
+ {
+  "id": "samosa",
+  "name": "Samosa",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "potato",
+   "refined flour",
+   "peas",
+   "cumin"
+  ],
+  "steps": [
+   "Make dough",
+   "Fill spiced potato peas",
+   "Deep fry"
+  ]
+ },
+ {
+  "id": "poha-cutlet",
+  "name": "Poha Cutlet",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick",
+   "tiffin"
+  ],
+  "ingredients": [
+   "flattened rice",
+   "potato",
+   "onion"
+  ],
+  "steps": [
+   "Mix soaked poha, potato",
+   "Shape",
+   "Shallow fry"
+  ]
+ },
+ {
+  "id": "veg-cutlet",
+  "name": "Veg Cutlet",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "potato",
+   "carrot",
+   "peas",
+   "bread"
+  ],
+  "steps": [
+   "Mash veg",
+   "Shape",
+   "Shallow fry"
+  ]
+ },
+ {
+  "id": "sandwich-veg",
+  "name": "Sandwich Veg",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick",
+   "tiffin"
+  ],
+  "ingredients": [
+   "bread",
+   "potato",
+   "tomato",
+   "cucumber",
+   "onion"
+  ],
+  "steps": [
+   "Slice veg",
+   "Layer on bread",
+   "Toast"
+  ]
+ },
+ {
+  "id": "cheese-sandwich",
+  "name": "Cheese Sandwich",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick",
+   "tiffin"
+  ],
+  "ingredients": [
+   "bread",
+   "cheese",
+   "butter"
+  ],
+  "steps": [
+   "Butter bread",
+   "Add cheese",
+   "Toast"
+  ]
+ },
+ {
+  "id": "corn-chaat",
+  "name": "Corn Chaat",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "corn",
+   "onion",
+   "tomato",
+   "lemon",
+   "chilli"
+  ],
+  "steps": [
+   "Boil corn",
+   "Toss with onion, tomato",
+   "Squeeze lemon"
+  ]
+ },
+ {
+  "id": "chana-chaat",
+  "name": "Chana Chaat",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "chickpeas",
+   "onion",
+   "tomato",
+   "lemon",
+   "coriander"
+  ],
+  "steps": [
+   "Boil chickpeas",
+   "Mix veg",
+   "Squeeze lemon"
+  ]
+ },
+ {
+  "id": "fruit-chaat",
+  "name": "Fruit Chaat",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "banana",
+   "apple",
+   "lemon",
+   "chilli"
+  ],
+  "steps": [
+   "Chop fruit",
+   "Toss with lemon",
+   "Sprinkle masala"
+  ]
+ },
+ {
+  "id": "bhel-puri",
+  "name": "Bhel Puri",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "roti",
+   "quick"
+  ],
+  "ingredients": [
+   "puffed rice",
+   "onion",
+   "tomato",
+   "tamarind",
+   "sev"
+  ],
+  "steps": [
+   "Toss puffed rice with veg",
+   "Add tamarind chutney",
+   "Top with sev"
+  ]
+ },
+ {
+  "id": "egg-bhurji",
+  "name": "Egg Bhurji",
+  "veg": false,
+  "diet": "egg",
+  "mealType": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "sabzi",
+   "quick",
+   "dry"
+  ],
+  "ingredients": [
+   "egg",
+   "onion",
+   "tomato",
+   "chilli",
+   "turmeric"
+  ],
+  "steps": [
+   "Saute onion, tomato, chilli",
+   "Add eggs",
+   "Scramble"
+  ]
+ },
+ {
+  "id": "egg-curry",
+  "name": "Egg Curry",
+  "veg": false,
+  "diet": "egg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi",
+   "gravy"
+  ],
+  "ingredients": [
+   "egg",
+   "onion",
+   "tomato",
+   "ginger",
+   "garlic",
+   "turmeric"
+  ],
+  "steps": [
+   "Boil eggs",
+   "Make onion-tomato masala",
+   "Simmer eggs in masala"
+  ]
+ },
+ {
+  "id": "anda-masala",
+  "name": "Anda Masala",
+  "veg": false,
+  "diet": "egg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi",
+   "gravy"
+  ],
+  "ingredients": [
+   "egg",
+   "onion",
+   "tomato",
+   "ginger",
+   "garlic"
+  ],
+  "steps": [
+   "Boil eggs, fry lightly",
+   "Cook masala",
+   "Add eggs"
+  ]
+ },
+ {
+  "id": "masala-omelette",
+  "name": "Masala Omelette",
+  "veg": false,
+  "diet": "egg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick",
+   "gravy"
+  ],
+  "ingredients": [
+   "egg",
+   "onion",
+   "tomato",
+   "chilli",
+   "coriander"
+  ],
+  "steps": [
+   "Beat egg with veg",
+   "Pour on pan",
+   "Cook both sides"
+  ]
+ },
+ {
+  "id": "boiled-egg-fry",
+  "name": "Boiled Egg Fry",
+  "veg": false,
+  "diet": "egg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "sabzi",
+   "quick",
+   "dry"
+  ],
+  "ingredients": [
+   "egg",
+   "onion",
+   "turmeric",
+   "chilli"
+  ],
+  "steps": [
+   "Boil eggs",
+   "Fry onion",
+   "Toss eggs"
+  ]
+ },
+ {
+  "id": "chicken-curry",
+  "name": "Chicken Curry",
+  "veg": false,
+  "diet": "nonveg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi",
+   "gravy"
+  ],
+  "ingredients": [
+   "chicken",
+   "onion",
+   "tomato",
+   "ginger",
+   "garlic",
+   "turmeric"
+  ],
+  "steps": [
+   "Fry onion, ginger, garlic",
+   "Add tomato, chicken",
+   "Simmer till cooked"
+  ]
+ },
+ {
+  "id": "butter-chicken",
+  "name": "Butter Chicken",
+  "veg": false,
+  "diet": "nonveg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "chicken",
+   "butter",
+   "tomato",
+   "cream",
+   "onion"
+  ],
+  "steps": [
+   "Grill or fry chicken",
+   "Make tomato butter gravy",
+   "Simmer chicken"
+  ]
+ },
+ {
+  "id": "chicken-tikka",
+  "name": "Chicken Tikka",
+  "veg": false,
+  "diet": "nonveg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "chicken",
+   "curd",
+   "ginger",
+   "garlic",
+   "lemon"
+  ],
+  "steps": [
+   "Marinate chicken",
+   "Skewer",
+   "Grill or pan sear"
+  ]
+ },
+ {
+  "id": "chicken-fry",
+  "name": "Chicken Fry",
+  "veg": false,
+  "diet": "nonveg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi",
+   "dry"
+  ],
+  "ingredients": [
+   "chicken",
+   "ginger",
+   "garlic",
+   "lemon",
+   "chilli"
+  ],
+  "steps": [
+   "Marinate",
+   "Shallow fry",
+   "Crisp"
+  ]
+ },
+ {
+  "id": "kadai-chicken",
+  "name": "Kadai Chicken",
+  "veg": false,
+  "diet": "nonveg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "chicken",
+   "capsicum",
+   "onion",
+   "tomato",
+   "coriander seeds"
+  ],
+  "steps": [
+   "Fry onion, capsicum",
+   "Add tomato, chicken",
+   "Simmer"
+  ]
+ },
+ {
+  "id": "chicken-korma",
+  "name": "Chicken Korma",
+  "veg": false,
+  "diet": "nonveg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "hard",
+  "tags": [
+   "sabzi",
+   "gravy"
+  ],
+  "ingredients": [
+   "chicken",
+   "curd",
+   "onion",
+   "cashew",
+   "ginger",
+   "garlic"
+  ],
+  "steps": [
+   "Fry onion, blend with cashew",
+   "Cook chicken with curd",
+   "Combine"
+  ]
+ },
+ {
+  "id": "chicken-do-pyaza",
+  "name": "Chicken Do Pyaza",
+  "veg": false,
+  "diet": "nonveg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "chicken",
+   "onion",
+   "tomato",
+   "ginger",
+   "garlic"
+  ],
+  "steps": [
+   "Fry onions twice",
+   "Add chicken, tomato",
+   "Simmer"
+  ]
+ },
+ {
+  "id": "mutton-curry",
+  "name": "Mutton Curry",
+  "veg": false,
+  "diet": "nonveg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 60,
+  "difficulty": "hard",
+  "tags": [
+   "sabzi",
+   "gravy"
+  ],
+  "ingredients": [
+   "mutton",
+   "onion",
+   "tomato",
+   "ginger",
+   "garlic",
+   "turmeric"
+  ],
+  "steps": [
+   "Fry onion, ginger, garlic",
+   "Brown mutton",
+   "Pressure cook"
+  ]
+ },
+ {
+  "id": "keema-matar",
+  "name": "Keema Matar",
+  "veg": false,
+  "diet": "nonveg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "mutton",
+   "peas",
+   "onion",
+   "tomato",
+   "ginger",
+   "garlic"
+  ],
+  "steps": [
+   "Brown keema with onion",
+   "Add tomato, peas",
+   "Cook dry"
+  ]
+ },
+ {
+  "id": "fish-curry",
+  "name": "Fish Curry",
+  "veg": false,
+  "diet": "nonveg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi",
+   "gravy"
+  ],
+  "ingredients": [
+   "fish",
+   "onion",
+   "tomato",
+   "tamarind",
+   "turmeric",
+   "mustard seeds"
+  ],
+  "steps": [
+   "Make tamarind gravy",
+   "Add fish",
+   "Simmer gently"
+  ]
+ },
+ {
+  "id": "fish-fry",
+  "name": "Fish Fry",
+  "veg": false,
+  "diet": "nonveg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi",
+   "dry"
+  ],
+  "ingredients": [
+   "fish",
+   "gram flour",
+   "lemon",
+   "turmeric",
+   "chilli"
+  ],
+  "steps": [
+   "Marinate fish",
+   "Coat lightly",
+   "Shallow fry"
+  ]
+ },
+ {
+  "id": "prawn-masala",
+  "name": "Prawn Masala",
+  "veg": false,
+  "diet": "nonveg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi",
+   "gravy"
+  ],
+  "ingredients": [
+   "prawn",
+   "onion",
+   "tomato",
+   "ginger",
+   "garlic",
+   "turmeric"
+  ],
+  "steps": [
+   "Make masala",
+   "Add prawns",
+   "Cook 5 min"
+  ]
+ },
+ {
+  "id": "mixed-veg",
+  "name": "Mixed Veg",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "potato",
+   "carrot",
+   "peas",
+   "cauliflower",
+   "onion",
+   "tomato",
+   "cumin"
+  ],
+  "steps": [
+   "Temper cumin",
+   "Saute onion, tomato",
+   "Add veg, cook covered"
+  ]
+ },
+ {
+  "id": "veg-kurma",
+  "name": "Veg Kurma",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "potato",
+   "carrot",
+   "peas",
+   "coconut",
+   "onion",
+   "tomato"
+  ],
+  "steps": [
+   "Grind coconut paste",
+   "Cook veg",
+   "Simmer with paste"
+  ]
+ },
+ {
+  "id": "navratan-korma",
+  "name": "Navratan Korma",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "hard",
+  "tags": [
+   "sabzi",
+   "gravy"
+  ],
+  "ingredients": [
+   "potato",
+   "carrot",
+   "peas",
+   "paneer",
+   "cream",
+   "cashew",
+   "onion"
+  ],
+  "steps": [
+   "Cook veg",
+   "Blend onion-cashew gravy",
+   "Combine with cream"
+  ]
+ },
+ {
+  "id": "veg-jalfrezi",
+  "name": "Veg Jalfrezi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "capsicum",
+   "carrot",
+   "onion",
+   "tomato",
+   "paneer"
+  ],
+  "steps": [
+   "Stir fry veg",
+   "Add tomato sauce masala",
+   "Toss"
+  ]
+ },
+ {
+  "id": "veg-kolhapuri",
+  "name": "Veg Kolhapuri",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 25,
+  "difficulty": "medium",
+  "tags": [
+   "roti"
+  ],
+  "ingredients": [
+   "potato",
+   "carrot",
+   "peas",
+   "onion",
+   "tomato",
+   "coconut"
+  ],
+  "steps": [
+   "Make spicy coconut masala",
+   "Add veg",
+   "Simmer"
+  ]
+ },
+ {
+  "id": "capsicum-aloo",
+  "name": "Capsicum Aloo",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "capsicum",
+   "potato",
+   "onion",
+   "cumin"
+  ],
+  "steps": [
+   "Temper cumin",
+   "Add potato, capsicum",
+   "Cook dry"
+  ]
+ },
+ {
+  "id": "shimla-mirch-besan",
+  "name": "Shimla Mirch Besan",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "capsicum",
+   "gram flour",
+   "onion",
+   "cumin"
+  ],
+  "steps": [
+   "Temper cumin",
+   "Saute capsicum, onion",
+   "Add besan, roast"
+  ]
+ },
+ {
+  "id": "cabbage-sabzi",
+  "name": "Cabbage Sabzi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "cabbage",
+   "potato",
+   "peas",
+   "turmeric",
+   "mustard seeds"
+  ],
+  "steps": [
+   "Temper mustard seeds",
+   "Add cabbage, potato",
+   "Cook dry"
+  ]
+ },
+ {
+  "id": "cabbage-poriyal",
+  "name": "Cabbage Poriyal",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "cabbage",
+   "coconut",
+   "mustard seeds",
+   "chilli"
+  ],
+  "steps": [
+   "Temper mustard seeds, chilli",
+   "Add cabbage",
+   "Finish with coconut"
+  ]
+ },
+ {
+  "id": "beans-poriyal",
+  "name": "Beans Poriyal",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "green beans",
+   "coconut",
+   "mustard seeds",
+   "chilli"
+  ],
+  "steps": [
+   "Temper mustard seeds",
+   "Add beans",
+   "Add coconut"
+  ]
+ },
+ {
+  "id": "carrot-beans-sabzi",
+  "name": "Carrot Beans Sabzi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "carrot",
+   "green beans",
+   "turmeric",
+   "cumin"
+  ],
+  "steps": [
+   "Temper cumin",
+   "Add veg, turmeric",
+   "Cook dry"
+  ]
+ },
+ {
+  "id": "beetroot-sabzi",
+  "name": "Beetroot Sabzi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "beetroot",
+   "coconut",
+   "mustard seeds",
+   "chilli"
+  ],
+  "steps": [
+   "Temper mustard seeds",
+   "Add beetroot",
+   "Finish coconut"
+  ]
+ },
+ {
+  "id": "sarson-ka-saag",
+  "name": "Sarson Ka Saag",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "mustard greens",
+   "spinach",
+   "maize flour",
+   "ginger",
+   "garlic"
+  ],
+  "steps": [
+   "Cook greens",
+   "Mash",
+   "Temper ginger, garlic, add makki flour"
+  ]
+ },
+ {
+  "id": "makki-roti",
+  "name": "Makki Roti",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "roti",
+   "quick",
+   "tiffin"
+  ],
+  "ingredients": [
+   "maize flour"
+  ],
+  "steps": [
+   "Knead with warm water",
+   "Pat flat",
+   "Roast"
+  ]
+ },
+ {
+  "id": "methi-malai-matar",
+  "name": "Methi Malai Matar",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "fenugreek",
+   "peas",
+   "cream",
+   "onion",
+   "cashew"
+  ],
+  "steps": [
+   "Blend onion-cashew",
+   "Cook methi, peas",
+   "Add cream"
+  ]
+ },
+ {
+  "id": "spinach-corn",
+  "name": "Spinach Corn",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "spinach",
+   "corn",
+   "garlic",
+   "cream"
+  ],
+  "steps": [
+   "Blanch spinach",
+   "Saute garlic, corn",
+   "Add puree"
+  ]
+ },
+ {
+  "id": "mushroom-masala",
+  "name": "Mushroom Masala",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi",
+   "gravy"
+  ],
+  "ingredients": [
+   "mushroom",
+   "onion",
+   "tomato",
+   "ginger",
+   "garlic"
+  ],
+  "steps": [
+   "Saute mushroom",
+   "Make masala",
+   "Combine"
+  ]
+ },
+ {
+  "id": "mushroom-matar",
+  "name": "Mushroom Matar",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "mushroom",
+   "peas",
+   "onion",
+   "tomato"
+  ],
+  "steps": [
+   "Make masala",
+   "Add mushroom, peas",
+   "Simmer"
+  ]
+ },
+ {
+  "id": "tomato-chutney",
+  "name": "Tomato Chutney",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 10,
+  "difficulty": "easy",
+  "tags": [
+   "side",
+   "quick"
+  ],
+  "ingredients": [
+   "tomato",
+   "garlic",
+   "chilli",
+   "mustard seeds"
+  ],
+  "steps": [
+   "Cook tomato, chilli, garlic",
+   "Blend",
+   "Temper"
+  ]
+ },
+ {
+  "id": "coconut-chutney",
+  "name": "Coconut Chutney",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 10,
+  "difficulty": "easy",
+  "tags": [
+   "side",
+   "quick"
+  ],
+  "ingredients": [
+   "coconut",
+   "chilli",
+   "ginger",
+   "mustard seeds"
+  ],
+  "steps": [
+   "Grind coconut, chilli, ginger",
+   "Temper mustard seeds",
+   "Mix"
+  ]
+ },
+ {
+  "id": "mint-chutney",
+  "name": "Mint Chutney",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 10,
+  "difficulty": "easy",
+  "tags": [
+   "side",
+   "quick"
+  ],
+  "ingredients": [
+   "mint",
+   "coriander",
+   "chilli",
+   "lemon"
+  ],
+  "steps": [
+   "Blend greens, chilli",
+   "Add lemon",
+   "Chill"
+  ]
+ },
+ {
+  "id": "raita-boondi",
+  "name": "Raita Boondi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 10,
+  "difficulty": "easy",
+  "tags": [
+   "side",
+   "quick"
+  ],
+  "ingredients": [
+   "curd",
+   "boondi",
+   "cumin"
+  ],
+  "steps": [
+   "Whisk curd",
+   "Add boondi, roasted cumin",
+   "Chill"
+  ]
+ },
+ {
+  "id": "cucumber-raita",
+  "name": "Cucumber Raita",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 10,
+  "difficulty": "easy",
+  "tags": [
+   "side",
+   "quick"
+  ],
+  "ingredients": [
+   "curd",
+   "cucumber",
+   "cumin"
+  ],
+  "steps": [
+   "Whisk curd",
+   "Add grated cucumber",
+   "Season roasted cumin"
+  ]
+ },
+ {
+  "id": "onion-raita",
+  "name": "Onion Raita",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 10,
+  "difficulty": "easy",
+  "tags": [
+   "side",
+   "quick"
+  ],
+  "ingredients": [
+   "curd",
+   "onion",
+   "cumin"
+  ],
+  "steps": [
+   "Whisk curd",
+   "Add onion",
+   "Season"
+  ]
+ },
+ {
+  "id": "lassi-sweet",
+  "name": "Lassi Sweet",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 5,
+  "difficulty": "easy",
+  "tags": [
+   "drink",
+   "quick"
+  ],
+  "ingredients": [
+   "curd",
+   "sugar",
+   "cardamom"
+  ],
+  "steps": [
+   "Blend curd, sugar",
+   "Add cardamom",
+   "Chill"
+  ]
+ },
+ {
+  "id": "masala-chaas",
+  "name": "Masala Chaas",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 5,
+  "difficulty": "easy",
+  "tags": [
+   "drink",
+   "quick",
+   "gravy"
+  ],
+  "ingredients": [
+   "curd",
+   "cumin",
+   "mint",
+   "coriander"
+  ],
+  "steps": [
+   "Blend curd, water",
+   "Add cumin, mint",
+   "Chill"
+  ]
+ },
+ {
+  "id": "masala-chai",
+  "name": "Masala Chai",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 5,
+  "difficulty": "easy",
+  "tags": [
+   "drink",
+   "quick",
+   "gravy"
+  ],
+  "ingredients": [
+   "tea",
+   "milk",
+   "ginger",
+   "cardamom",
+   "sugar"
+  ],
+  "steps": [
+   "Boil water, ginger, cardamom",
+   "Add tea, milk",
+   "Strain"
+  ]
+ },
+ {
+  "id": "suji-halwa",
+  "name": "Suji Halwa",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sweet"
+  ],
+  "ingredients": [
+   "semolina",
+   "sugar",
+   "ghee",
+   "cardamom"
+  ],
+  "steps": [
+   "Roast suji in ghee",
+   "Add sugar syrup",
+   "Stir till thick"
+  ]
+ },
+ {
+  "id": "kheer",
+  "name": "Kheer",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sweet"
+  ],
+  "ingredients": [
+   "rice",
+   "milk",
+   "sugar",
+   "cardamom"
+  ],
+  "steps": [
+   "Simmer rice in milk",
+   "Add sugar, cardamom",
+   "Cook till creamy"
+  ]
+ },
+ {
+  "id": "gajar-halwa",
+  "name": "Gajar Halwa",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sweet"
+  ],
+  "ingredients": [
+   "carrot",
+   "milk",
+   "sugar",
+   "ghee",
+   "cardamom"
+  ],
+  "steps": [
+   "Grate carrot",
+   "Cook in milk",
+   "Add sugar, ghee"
+  ]
+ },
+ {
+  "id": "besan-ladoo",
+  "name": "Besan Ladoo",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sweet"
+  ],
+  "ingredients": [
+   "gram flour",
+   "ghee",
+   "sugar",
+   "cardamom"
+  ],
+  "steps": [
+   "Roast besan in ghee",
+   "Add sugar",
+   "Shape ladoos"
+  ]
+ },
+ {
+  "id": "sheera",
+  "name": "Sheera",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sweet"
+  ],
+  "ingredients": [
+   "semolina",
+   "banana",
+   "sugar",
+   "ghee"
+  ],
+  "steps": [
+   "Roast suji",
+   "Add mashed banana",
+   "Add sugar, water"
+  ]
+ },
+ {
+  "id": "banana-pancake",
+  "name": "Banana Pancake",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sweet"
+  ],
+  "ingredients": [
+   "banana",
+   "wheat flour",
+   "milk",
+   "sugar"
+  ],
+  "steps": [
+   "Mash banana with milk, flour",
+   "Pour on tawa",
+   "Cook both sides"
+  ]
+ },
+ {
+  "id": "vermicelli-upma",
+  "name": "Vermicelli Upma",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "snack"
+  ],
+  "timeMinutes": 20,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick",
+   "tiffin"
+  ],
+  "ingredients": [
+   "vermicelli",
+   "onion",
+   "tomato",
+   "mustard seeds"
+  ],
+  "steps": [
+   "Roast vermicelli",
+   "Temper, add onion, tomato",
+   "Add water"
+  ]
+ },
+ {
+  "id": "seviyan-kheer",
+  "name": "Seviyan Kheer",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sweet"
+  ],
+  "ingredients": [
+   "vermicelli",
+   "milk",
+   "sugar",
+   "cardamom"
+  ],
+  "steps": [
+   "Roast seviyan",
+   "Simmer in milk",
+   "Add sugar"
+  ]
+ },
+ {
+  "id": "dal-khichdi-tadka",
+  "name": "Dal Khichdi Tadka",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "rice",
+   "tiffin"
+  ],
+  "ingredients": [
+   "rice",
+   "toor dal",
+   "turmeric",
+   "cumin",
+   "garlic"
+  ],
+  "steps": [
+   "Pressure cook rice, dal",
+   "Temper garlic, cumin",
+   "Pour over"
+  ]
+ },
+ {
+  "id": "lemon-dal",
+  "name": "Lemon Dal",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "toor dal",
+   "lemon",
+   "cumin",
+   "turmeric"
+  ],
+  "steps": [
+   "Cook dal",
+   "Temper cumin",
+   "Add lemon"
+  ]
+ },
+ {
+  "id": "tomato-dal",
+  "name": "Tomato Dal",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "toor dal",
+   "tomato",
+   "cumin",
+   "turmeric",
+   "garlic"
+  ],
+  "steps": [
+   "Cook dal with tomato",
+   "Temper",
+   "Mix"
+  ]
+ },
+ {
+  "id": "dal-palak-khichdi",
+  "name": "Dal Palak Khichdi",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "rice",
+   "tiffin"
+  ],
+  "ingredients": [
+   "rice",
+   "moong dal",
+   "spinach",
+   "cumin"
+  ],
+  "steps": [
+   "Pressure cook",
+   "Add spinach",
+   "Temper"
+  ]
+ },
+ {
+  "id": "tomato-soup",
+  "name": "Tomato Soup",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "tomato",
+   "onion",
+   "garlic",
+   "butter"
+  ],
+  "steps": [
+   "Cook tomato, onion",
+   "Blend",
+   "Finish with butter"
+  ]
+ },
+ {
+  "id": "veg-soup",
+  "name": "Veg Soup",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "snack"
+  ],
+  "timeMinutes": 15,
+  "difficulty": "easy",
+  "tags": [
+   "snack",
+   "quick"
+  ],
+  "ingredients": [
+   "carrot",
+   "cabbage",
+   "onion",
+   "peas"
+  ],
+  "steps": [
+   "Saute veg",
+   "Add water, simmer",
+   "Season"
+  ]
+ },
+ {
+  "id": "mixed-dal-cheela",
+  "name": "Mixed Dal Cheela",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "breakfast",
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 35,
+  "difficulty": "medium",
+  "tags": [
+   "dal"
+  ],
+  "ingredients": [
+   "moong dal",
+   "masoor dal",
+   "chana dal",
+   "onion"
+  ],
+  "steps": [
+   "Soak, grind dals",
+   "Add onion",
+   "Cook pancakes"
+  ]
+ },
+ {
+  "id": "stuffed-tomato",
+  "name": "Stuffed Tomato",
+  "veg": true,
+  "diet": "veg",
+  "mealType": [
+   "lunch",
+   "dinner"
+  ],
+  "timeMinutes": 30,
+  "difficulty": "medium",
+  "tags": [
+   "sabzi"
+  ],
+  "ingredients": [
+   "tomato",
+   "paneer",
+   "onion",
+   "coriander"
+  ],
+  "steps": [
+   "Hollow tomatoes",
+   "Stuff paneer mix",
+   "Bake or steam"
+  ]
+ }
 ]
